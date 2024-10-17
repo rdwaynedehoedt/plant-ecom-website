@@ -330,7 +330,7 @@ the website, in dark theme
 }
 
 .home__social {
-  position: absolute;
+  position: a;
   top: 2rem;
   right: -1rem;
   display: grid;
