@@ -330,7 +330,7 @@ the website, in dark theme
 }
 
 .home__social {
-  position: a;
+  position: absolute;
   top: 2rem;
   right: -1rem;
   display: grid;
@@ -409,6 +409,49 @@ the website, in dark theme
 .button--link:hover .button__icon {
   transform: translateX(.25rem);
 }
+
+/*=============== LOGIN_BUTTONS ===============*/
+
+/* Login Button Styles */
+.Login_button--flex {
+  display: inline-flex;
+  align-items: center;
+  background-color: var(--first-color);
+  color: #FFF;
+  padding: 0.5rem 1rem;
+  /* Smaller padding for a cute, compact look */
+  border-radius: 1.5rem;
+  /* More rounded corners for a cute feel */
+  font-weight: var(--font-medium);
+  font-size: 0.85rem;
+  /* Slightly smaller font size */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  text-decoration: none;
+}
+
+.Login_button--flex:hover {
+  background-color: var(--first-color-alt);
+  /* Change background on hover */
+  transform: translateY(-2px);
+  /* Subtle hover lift for a playful effect */
+}
+
+.Login_button--flex .button__icon {
+  font-size: 1rem;
+  /* Adjust icon size for a balanced look */
+  transition: transform 0.3s ease;
+}
+
+.Login_button--flex:hover .button__icon {
+  transform: translateX(0.15rem);
+  /* Move icon slightly to the right on hover */
+}
+
+.nav__btns {
+  display: inline-flex;
+  align-items: center;
+}
+
 
 /*=============== ABOUT ===============*/
 .about__container {
