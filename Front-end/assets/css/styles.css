@@ -114,7 +114,6 @@ img {
   height: auto;
 }
 
-/*=============== THEME ===============*/
 /*========== Variables Dark theme ==========*/
 body.dark-theme {
   --first-color-dark: hsl(var(--hue), 8%, 20%);
@@ -463,6 +462,9 @@ the website, in dark theme
   display: inline-flex;
   align-items: center;
 }
+
+/*=============== Banner_Aboout_page ===============*/
+
 
 
 /*=============== ABOUT ===============*/
