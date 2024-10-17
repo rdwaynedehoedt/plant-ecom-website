@@ -377,28 +377,38 @@ the website, in dark theme
   display: inline-block;
   background-color: var(--first-color);
   color: #FFF;
-  padding: 1rem 1.75rem;
-  border-radius: .5rem;
+  padding: 0.5rem 1rem;
+  /* Smaller padding for a compact look */
+  border-radius: 1.5rem;
+  /* More rounded for a cuter feel */
   font-weight: var(--font-medium);
-  transition: .3s;
+  font-size: 0.85rem;
+  /* Slightly smaller font size */
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .button:hover {
   background-color: var(--first-color-alt);
+  transform: translateY(-2px);
+  /* Subtle hover lift for a playful effect */
 }
 
 .button__icon {
-  transition: .3s;
+  font-size: 1rem;
+  /* Adjust icon size for balance */
+  transition: transform 0.3s ease;
 }
 
 .button:hover .button__icon {
-  transform: translateX(.25rem);
+  transform: translateX(0.2rem);
+  /* Slight icon movement on hover */
 }
 
 .button--flex {
   display: inline-flex;
   align-items: center;
-  column-gap: .5rem;
+  column-gap: 0.35rem;
+  /* Smaller gap for a tighter layout */
 }
 
 .button--link {
@@ -407,8 +417,10 @@ the website, in dark theme
 }
 
 .button--link:hover .button__icon {
-  transform: translateX(.25rem);
+  transform: translateX(0.2rem);
+  /* Keep the movement subtle */
 }
+
 
 /*=============== LOGIN_BUTTONS ===============*/
 
