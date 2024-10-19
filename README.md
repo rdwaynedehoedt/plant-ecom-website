@@ -89,11 +89,7 @@ This project is licensed under the MIT License.
 ## Contact
 
 For more information, please contact Dwayne De Hoedt:
-- **Email**: [user@email.com](mailto:user@email.com)
+- **Email**: [dwaynedehoedt.rosch@email.com](mailto:dwaynedehoedt.rosch@email.com)
 - **Phone**: +94 772186241
-
-Stay connected with us on:
-- [Facebook](https://www.facebook.com/)
-- [Instagram](https://www.instagram.com/)
-- [Twitter](https://twitter.com/)
+]
 
