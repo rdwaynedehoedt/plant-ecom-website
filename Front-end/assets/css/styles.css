@@ -1154,3 +1154,11 @@ the website, in dark theme
     right: 3rem;
   }
 }
+
+.google_maps_contactpage {
+  width: 300px;
+  height: 225px;
+  margin-left: 0;
+  float: right;
+
+}
