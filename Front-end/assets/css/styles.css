@@ -985,6 +985,7 @@ the website, in dark theme
   }
 
   .home__container,
+  .login__container,
   .about__container,
   .questions__container,
   .contact__container,
@@ -1146,6 +1147,10 @@ the website, in dark theme
     column-gap: 7rem;
   }
 
+  .login__container {
+    column-gap: 7rem;
+  }
+
   .scrollup {
     right: 3rem;
   }
@@ -1155,4 +1160,10 @@ the website, in dark theme
   margin-left: 0;
   float: center;
 
+}
+
+
+/*login page css*/
+.login__container {
+  row-gap: 2rem;
 }
