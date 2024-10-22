@@ -19,18 +19,10 @@
 
             <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list">
-                    <li class="nav__item">
-                        <a href="/Front-end/index.html" class="nav__link ">Home</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="/Front-end/about.html" class="nav__link">About</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="/Front-end/products.html" class="nav__link">Products</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="/Front-end/contact.html" class="nav__link">Contact Us</a>
-                    </li>
+                    <li class="nav__item"><a href="/Front-end/index.html" class="nav__link ">Home</a></li>
+                    <li class="nav__item"><a href="/Front-end/about.html" class="nav__link">About</a></li>
+                    <li class="nav__item"><a href="/Front-end/products.html" class="nav__link">Products</a></li>
+                    <li class="nav__item"><a href="/Front-end/contact.html" class="nav__link">Contact Us</a></li>
                 </ul>
 
                 <div class="nav__close" id="nav-close">
@@ -39,7 +31,6 @@
             </div>
 
             <div class="nav__btns">
-                <!-- Theme change button -->
                 <i class="ri-moon-line change-theme" id="theme-button"></i>
 
                 <div class="nav__toggle" id="nav-toggle">
@@ -49,20 +40,27 @@
         </nav>
     </header>
 
-    <section class="contact section container">
-        <div class="contact__box">
-            <h2 class="section__title-center">
-                Sign In & Sign Up
-            </h2>
-            <div>
-                <p>u can sing in here</p>
+    <section class="login section container">
+        <h2 class="section__title-center">Sign In & Sign Up</h2>
+        <div class="login__container">
+            <div class="left-side-login">
+                <h5>Sign In</h5>
+                <form action="#" class="login__form">
+                    <input type="email" placeholder="Email" class="input__field">
+                    <input type="password" placeholder="Password" class="input__field">
+                    <button type="submit" class="Login_button--flex">Sign In</button>
+                    <a href="#" class="forgot-password">Forgot Password?</a>
+                </form>
             </div>
-        </div>
 
-        <div class="login__container grid">
-            <h6 class="section__title ">
-
-            </h6>
+            <div class="right-side-login">
+                <h5>Create New Account</h5>
+                <form action="#" class="login__form">
+                    <input type="email" placeholder="Email" class="input__field">
+                    <input type="password" placeholder="Password" class="input__field">
+                    <button type="submit" class="Login_button--flex">Sign Up</button>
+                </form>
+            </div>
         </div>
     </section>
 </body>
