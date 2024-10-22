@@ -144,3 +144,5 @@ sr.reveal(`.product__description`)
 sr.reveal(`.about__img, .contact__box`, { origin: 'left' })
 sr.reveal(`.about__data, .contact__form`, { origin: 'right' })
 sr.reveal(`.steps__card, .product__card, .questions__group, .footer`, { interval: 100 })
+
+sr.reveal(`.section__title-center`)
