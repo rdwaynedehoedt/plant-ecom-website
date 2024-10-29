@@ -19,7 +19,7 @@
 
             <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list">
-                    <li class="nav__item"><a href="/Front-end/index.html" class="nav__link ">Home</a></li>
+                    <li class="nav__item"><a href="/Front-end/index.html" class="nav__link">Home</a></li>
                     <li class="nav__item"><a href="/Front-end/about.html" class="nav__link">About</a></li>
                     <li class="nav__item"><a href="/Front-end/products.html" class="nav__link">Products</a></li>
                     <li class="nav__item"><a href="/Front-end/contact.html" class="nav__link">Contact Us</a></li>
@@ -46,29 +46,31 @@
             Sign In & Sign Up
         </h2>
         <div class="login__container">
+            <!-- Sign In Form -->
             <div class="left-side-login">
                 <h5>Sign In</h5>
                 <form action="/Back-end/auth/login.php" method="POST" class="login__form">
-                    <input type="email" placeholder="Email" class="input__field">
-                    <input type="password" placeholder="Password" class="input__field">
+                    <input type="email" placeholder="Email" class="input__field" name="email" required>
+                    <input type="password" placeholder="Password" class="input__field" name="password" required>
                     <button type="submit" class="Login_button--flex">Sign In</button>
                     <a href="#" class="forgot-password">Forgot Password?</a>
                 </form>
             </div>
 
+            <!-- Sign Up Form -->
             <div class="right-side-login">
                 <h5>Create New Account</h5>
-                <form action="/Back-end/auth/login.php" class="login__form">
-                    <input type="name" placeholder="Full Name" class="input__field">
-                    <input type="email" placeholder="Email" class="input__field">
-                    <input type="password" placeholder="Password" class="input__field">
-                    <input type="repassword" placeholder="conform the Password" class="input__field">
+                <form action="/Back-end/auth/signup.php" method="POST" class="login__form">
+                    <input type="text" placeholder="Full Name" class="input__field" name="name" required>
+                    <input type="email" placeholder="Email" class="input__field" name="email" required>
+                    <input type="password" placeholder="Password" class="input__field" name="password" required>
+                    <input type="password" placeholder="Confirm Password" class="input__field" name="confirm_password"
+                        required>
                     <button type="submit" class="Login_button--flex">Sign Up</button>
                 </form>
             </div>
         </div>
     </section>
-
 
     <footer class="footer section">
         <div class="footer__container container grid">
@@ -83,7 +85,6 @@
 
                 <div class="footer__subscribe">
                     <input type="email" placeholder="Enter your email" class="footer__input">
-
                     <button class="button button--flex footer__button">
                         Subscribe
                         <i class="ri-arrow-right-up-line button__icon"></i>
@@ -93,9 +94,8 @@
 
             <div class="footer__content">
                 <h3 class="footer__title">Our Address</h3>
-
                 <ul class="footer__data">
-                    <li class="footer__information"> No 23 Galle Road</li>
+                    <li class="footer__information">No 23 Galle Road</li>
                     <li class="footer__information">Colombo 02</li>
                     <li class="footer__information">Sri Lanka</li>
                 </ul>
@@ -103,10 +103,8 @@
 
             <div class="footer__content">
                 <h3 class="footer__title">Contact Us</h3>
-
                 <ul class="footer__data">
                     <li class="footer__information">+94 772186241</li>
-
                     <div class="footer__social">
                         <a href="https://www.facebook.com/" class="footer__social-link">
                             <i class="ri-facebook-fill"></i>
@@ -125,7 +123,6 @@
                 <h3 class="footer__title">
                     We accept all credit cards
                 </h3>
-
                 <div class="footer__cards">
                     <img src="assets/img/card1.png" alt="" class="footer__card">
                     <img src="assets/img/card2.png" alt="" class="footer__card">
@@ -135,8 +132,9 @@
             </div>
         </div>
 
-        <p class="footer__copy">&#169; DwayneFX 2024. All rigths reserved</p>
+        <p class="footer__copy">&#169; DwayneFX 2024. All rights reserved</p>
     </footer>
+
     <!--=============== SCROLL UP ===============-->
     <a href="#" class="scrollup" id="scroll-up">
         <i class="ri-arrow-up-fill scrollup__icon"></i>
@@ -144,8 +142,6 @@
 
     <!--=============== SCROLL REVEAL ===============-->
     <script src="assets/js/scrollreveal.min.js"></script>
-
-    <!--=============== MAIN JS ===============-->
     <script src="assets/js/main.js"></script>
 
 </body>
