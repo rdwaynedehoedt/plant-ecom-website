@@ -1,4 +1,6 @@
 <?php
+session_start(); // Start session before anything else
+
 // Include the database connection
 include('../config/db.php');
 
@@ -25,12 +27,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Verify the password
             if (password_verify($password, $user['password'])) {
                 // Start the session and store user data
-                session_start();
                 $_SESSION['user_id'] = $user['id'];
                 $_SESSION['email'] = $user['email'];
 
                 // Redirect to the dashboard or home page
-                header("Location: /Back-end/dashboard.php");
+                header("Location: /PLANT-ECOM-WEBSITE/Back-end/dashboard/dashboard.php");
                 exit();
             } else {
                 echo "Invalid password!";
