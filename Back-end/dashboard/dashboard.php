@@ -2,7 +2,7 @@
 session_start();
 if (!isset($_SESSION['user_id'])) {
     // If the user is not logged in, redirect to login page
-    header("Location: /Front-end/login.html");
+    header("Location: /PLANT-ECOM-WEBSITE/Front-end/login.html");
     exit();
 }
 ?>
@@ -16,6 +16,6 @@ if (!isset($_SESSION['user_id'])) {
 <body>
     <h2>Welcome, <?php echo $_SESSION['email']; ?>!</h2>
     <p>You are logged in.</p>
-    <a href="/Back-end/auth/logout.php">Logout</a>
+    <a href="/PLANT-ECOM-WEBSITE/Back-end/auth/logout.php">Logout</a>
 </body>
 </html>
