@@ -1,13 +1,13 @@
 <?php
-session_start(); // Start session before anything else
+session_start(); // Start the session at the beginning of the script
 
-// Include the database connection
+// Include the database connection file
 include('../config/db.php');
 
 // Check if the form was submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    // Get the email and password from the form
+    // Get email and password from the form
     $email = $_POST['email'];
     $password = $_POST['password'];
 
@@ -29,25 +29,33 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 // Start the session and store user data
                 $_SESSION['user_id'] = $user['id'];
                 $_SESSION['email'] = $user['email'];
-                $_SESSION['role'] = $user['role']; // Assuming you have a 'role' column in your database
+                $_SESSION['role'] = $user['role']; // Store the user's role
 
-                // Redirect based on user role
-                if ($user['role'] == 'admin') {
-                    header("Location: ../dashboard/admin_dashboard/dashboard.php");
+                // Redirect to different dashboards based on user role
+                if ($user['role'] === 'admin') {
+                    header("Location: /PLANT-ECOM-WEBSITE/Back-end/dashboard/admin_dashboard/dashboard.php"); // Admin dashboard
+                    exit();
+                } else if ($user['role'] === 'customer') {
+                    header("Location: /PLANT-ECOM-WEBSITE/Back-end/dashboard/customer_dashboard/dashboard.php"); // Customer dashboard
+                    exit();
                 } else {
-                    header("Location: ../dashboard/customer_dashboard/dashboard.php");
+                    // If the role is neither admin nor customer
+                    echo "Access Denied!";
                 }
-                exit();
             } else {
+                // Password is incorrect
                 echo "Invalid password!";
             }
         } else {
+            // No user found
             echo "No user found with that email!";
         }
     } else {
+        // Email or password field is empty
         echo "Please fill in both email and password!";
     }
 } else {
+    // Incorrect request method
     echo "Invalid request method!";
 }
 ?>
