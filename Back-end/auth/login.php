@@ -29,9 +29,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 // Start the session and store user data
                 $_SESSION['user_id'] = $user['id'];
                 $_SESSION['email'] = $user['email'];
+                $_SESSION['role'] = $user['role']; // Assuming you have a 'role' column in your database
 
-                // Redirect to the dashboard or home page
-                header("Location: /PLANT-ECOM-WEBSITE/Back-end/dashboard/dashboard.php");
+                // Redirect based on user role
+                if ($user['role'] == 'admin') {
+                    header("Location: ../dashboard/admin_dashboard/dashboard.php");
+                } else {
+                    header("Location: ../dashboard/customer_dashboard/dashboard.php");
+                }
                 exit();
             } else {
                 echo "Invalid password!";
