@@ -33,10 +33,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                 // Redirect to different dashboards based on user role
                 if ($user['role'] === 'admin') {
-                    header("Location: /PLANT-ECOM-WEBSITE/Back-end/dashboard/admin_dashboard/dashboard.php"); // Admin dashboard
+                    header("Location: /PLANT-ECOM-WEBSITE/Back-end/dashboard/admin-dashboard/dashboard.php"); // Admin dashboard
                     exit();
                 } else if ($user['role'] === 'customer') {
-                    header("Location: /PLANT-ECOM-WEBSITE/Back-end/dashboard/customer_dashboard/dashboard.php"); // Customer dashboard
+                    header("Location: /PLANT-ECOM-WEBSITE/Back-end/dashboard/customer-dashboard/dashboard.php"); // Customer dashboard
                     exit();
                 } else {
                     // If the role is neither admin nor customer
