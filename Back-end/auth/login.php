@@ -15,7 +15,7 @@
             $stmt->bind_param("s", $email);
             $stmt->execute();
             $result = $stmt->get_result();
-    
+
             // If the user exists
             if ($result->num_rows === 1) {
                 $user = $result->fetch_assoc(); // Fetch the user data
