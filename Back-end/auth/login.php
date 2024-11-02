@@ -9,7 +9,7 @@
     
         // Validate input fields
         if (!empty($email) && !empty($password)) {
-    
+                
             // Prepare an SQL statement to check if the user exists
             $stmt = $mysqli->prepare("SELECT * FROM users WHERE email = ?");
             $stmt->bind_param("s", $email);
