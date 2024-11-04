@@ -11,18 +11,18 @@
 </head>
 
 <body>
-    <header class="header" id="header">
+<header class="header" id="header">
         <nav class="nav container">
-            <a href="#" class="nav__logo">
+            <a href="/PLANT-ECOM-WEBSITE/Front-end/index.php" class="nav__logo">
                 <i class="ri-leaf-line nav__logo-icon"></i> PlantPedia
             </a>
 
             <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list">
-                    <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
-                    <li class="nav__item"><a href="about.html" class="nav__link">About</a></li>
-                    <li class="nav__item"><a href="products.html" class="nav__link">Products</a></li>
-                    <li class="nav__item"><a href="contact.html" class="nav__link">Contact Us</a></li>
+                    <li class="nav__item"><a href="/PLANT-ECOM-WEBSITE/Front-end/index.php" class="nav__link">Home</a></li>
+                    <li class="nav__item"><a href="/PLANT-ECOM-WEBSITE/Front-end/about.php" class="nav__link">About</a></li>
+                    <li class="nav__item"><a href="/PLANT-ECOM-WEBSITE/Front-end/products.php" class="nav__link">Products</a></li>
+                    <li class="nav__item"><a href="/PLANT-ECOM-WEBSITE/Front-end/contact.php" class="nav__link">Contact Us</a></li>
                 </ul>
 
                 <div class="nav__close" id="nav-close">
@@ -40,53 +40,78 @@
             </div>
             <div class="nav__btns">
                 <a href="login.html" class="Login_button--flex">
-                    Login <i class="ri-login-box-line    button__icon"></i>
+                    Login <i class="ri-login-box-line button__icon"></i>
                 </a>
             </div>
         </nav>
     </header>
 
+    <section class="contact section container" id="contact">
+        <div class="contact__box">
+            <h2 class="section__title-center">
+                Contact Us
+            </h2>
+            <br>
+        </div>
 
-
-    <section class="about section container">
-        <div class=" about__container grid">
-            <img src="assets/img/about.png" alt="" class="about__img">
-
-            <div class="about__data">
-                <h2 class="section__title about__title">
-                    Who We Truly Are & <br> Why Choose Us
+        <div class="contact__container grid">
+            <div class="contact__box">
+                <h2 class="section__title">
+                    Reach out to us today <br> via any of the given <br> information
                 </h2>
 
-                <p class="about__description">
-                    We have over 4000+ unbiased reviews and our customers
-                    trust our plant process and delivery service every time
-                </p>
+                <div class="contact__data">
+                    <div class="contact__information">
+                        <h3 class="contact__subtitle">Call us for instant support</h3>
+                        <span class="contact__description">
+                            <i class="ri-phone-line contact__icon"></i>
+                            +94 77 218 6241
+                        </span>
+                    </div>
 
-                <div class="about__details">
-                    <p class="about__details-description">
-                        <i class="ri-checkbox-fill about__details-icon"></i>
-                        We always deliver on time.
-                    </p>
-                    <p class="about__details-description">
-                        <i class="ri-checkbox-fill about__details-icon"></i>
-                        We give you guides to protect and care for your plants.
-                    </p>
-                    <p class="about__details-description">
-                        <i class="ri-checkbox-fill about__details-icon"></i>
-                        We always come over for a check-up after sale.
-                    </p>
-                    <p class="about__details-description">
-                        <i class="ri-checkbox-fill about__details-icon"></i>
-                        100% money back guaranteed.
-                    </p>
+                    <div class="contact__information">
+                        <h3 class="contact__subtitle">Write us by mail</h3>
+                        <span class="contact__description">
+                            <i class="ri-mail-line contact__icon"></i>
+                            dwaynedehoedt.rosch@gmail.com
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <form action="" class="contact__form">
+                <div class="contact__inputs">
+                    <div class="contact__content">
+                        <input type="email" placeholder=" " class="contact__input">
+                        <label for="" class="contact__label">Email</label>
+                    </div>
+
+                    <div class="contact__content">
+                        <input type="text" placeholder=" " class="contact__input">
+                        <label for="" class="contact__label">Subject</label>
+                    </div>
+
+                    <div class="contact__content contact__area">
+                        <textarea name="message" placeholder=" " class="contact__input"></textarea>
+                        <label for="" class="contact__label">Message</label>
+                    </div>
                 </div>
 
-                <a href="/Front-end/products.html" class="button--link button--flex">
-                    Shop Now <i class="ri-arrow-right-down-line button__icon"></i>
-                </a>
-            </div>
+                <button class="button button--flex">
+                    Send Message
+                    <i class="ri-arrow-right-up-line button__icon"></i>
+                </button>
+            </form>
+        </div>
+        <div class="contact__box">
+            <br>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.8143223604848!2d79.84806807451206!3d6.912791318518082!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae25960d4668fff%3A0xf07c01bc93e0f1ac!2sSLIIT%20CITY%20UNI!5e0!3m2!1sen!2slk!4v1729400569412!5m2!1sen!2slk"
+                width="600" height="450" style="border:0; display: block; margin: 0 auto;" allowfullscreen=""
+                loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </section>
+    </main>
 
     <!--==================== FOOTER ====================-->
     <footer class="footer section">
@@ -157,6 +182,9 @@
         <p class="footer__copy">&#169; DwayneFX 2024. All rigths reserved</p>
     </footer>
 
+
+    <script src="/Front-end/assets/js/main.js"></script>
+
     <!--=============== SCROLL UP ===============-->
     <a href="#" class="scrollup" id="scroll-up">
         <i class="ri-arrow-up-fill scrollup__icon"></i>
@@ -167,6 +195,7 @@
 
     <!--=============== MAIN JS ===============-->
     <script src="assets/js/main.js"></script>
+</body>
 
 </body>
 

@@ -11,18 +11,18 @@
 </head>
 
 <body>
-    <header class="header" id="header">
+<header class="header" id="header">
         <nav class="nav container">
-            <a href="#" class="nav__logo">
+            <a href="/PLANT-ECOM-WEBSITE/Front-end/index.php" class="nav__logo">
                 <i class="ri-leaf-line nav__logo-icon"></i> PlantPedia
             </a>
 
             <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list">
-                    <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
-                    <li class="nav__item"><a href="about.html" class="nav__link">About</a></li>
-                    <li class="nav__item"><a href="products.html" class="nav__link">Products</a></li>
-                    <li class="nav__item"><a href="contact.html" class="nav__link">Contact Us</a></li>
+                    <li class="nav__item"><a href="/PLANT-ECOM-WEBSITE/Front-end/index.php" class="nav__link">Home</a></li>
+                    <li class="nav__item"><a href="/PLANT-ECOM-WEBSITE/Front-end/about.php" class="nav__link">About</a></li>
+                    <li class="nav__item"><a href="/PLANT-ECOM-WEBSITE/Front-end/products.php" class="nav__link">Products</a></li>
+                    <li class="nav__item"><a href="/PLANT-ECOM-WEBSITE/Front-end/contact.php" class="nav__link">Contact Us</a></li>
                 </ul>
 
                 <div class="nav__close" id="nav-close">
@@ -40,84 +40,40 @@
             </div>
             <div class="nav__btns">
                 <a href="login.html" class="Login_button--flex">
-                    Login <i class="ri-login-box-line    button__icon"></i>
+                    Login <i class="ri-login-box-line button__icon"></i>
                 </a>
             </div>
         </nav>
     </header>
 
-    <section class="contact section container" id="contact">
-        <div class="contact__box">
-            <h2 class="section__title-center">
-                Contact Us
-            </h2>
-            <br>
+    <section class="product-detail container">
+        <div class="product-detail__header">
+            <h1 class="product-detail__title">Product Title</h1>
         </div>
 
-        <div class="contact__container grid">
-            <div class="contact__box">
-                <h2 class="section__title">
-                    Reach out to us today <br> via any of the given <br> information
-                </h2>
-
-                <div class="contact__data">
-                    <div class="contact__information">
-                        <h3 class="contact__subtitle">Call us for instant support</h3>
-                        <span class="contact__description">
-                            <i class="ri-phone-line contact__icon"></i>
-                            +94 77 218 6241
-                        </span>
-                    </div>
-
-                    <div class="contact__information">
-                        <h3 class="contact__subtitle">Write us by mail</h3>
-                        <span class="contact__description">
-                            <i class="ri-mail-line contact__icon"></i>
-                            dwaynedehoedt.rosch@gmail.com
-                        </span>
-                    </div>
-                </div>
+        <div class="product-detail__content">
+            <div class="product-detail__image">
+                <img src="assets/img/product1.png" alt="Product Image">
             </div>
 
-            <form action="" class="contact__form">
-                <div class="contact__inputs">
-                    <div class="contact__content">
-                        <input type="email" placeholder=" " class="contact__input">
-                        <label for="" class="contact__label">Email</label>
-                    </div>
-
-                    <div class="contact__content">
-                        <input type="text" placeholder=" " class="contact__input">
-                        <label for="" class="contact__label">Subject</label>
-                    </div>
-
-                    <div class="contact__content contact__area">
-                        <textarea name="message" placeholder=" " class="contact__input"></textarea>
-                        <label for="" class="contact__label">Message</label>
-                    </div>
+            <div class="product-detail__description">
+                <p>
+                    Here is the description of the product. It provides details and highlights of the product features.
+                </p>
+                <!-- Buttons moved here under description -->
+                <div class="product-detail__actions">
+                    <button class="button button--primary small-button">Buy</button>
+                    <button class="button button--secondary small-button">Add to Cart</button>
                 </div>
-
-                <button class="button button--flex">
-                    Send Message
-                    <i class="ri-arrow-right-up-line button__icon"></i>
-                </button>
-            </form>
-        </div>
-        <div class="contact__box">
-            <br>
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.8143223604848!2d79.84806807451206!3d6.912791318518082!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae25960d4668fff%3A0xf07c01bc93e0f1ac!2sSLIIT%20CITY%20UNI!5e0!3m2!1sen!2slk!4v1729400569412!5m2!1sen!2slk"
-                width="600" height="450" style="border:0; display: block; margin: 0 auto;" allowfullscreen=""
-                loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
         </div>
     </section>
-    </main>
 
-    <!--==================== FOOTER ====================-->
+
     <footer class="footer section">
         <div class="footer__container container grid">
             <div class="footer__content">
-                <a href="#" class="footer__logo">
+                <a href="" class="footer__logo">
                     <i class="ri-leaf-line footer__logo-icon"></i> PlantPedia
                 </a>
 
@@ -183,8 +139,6 @@
     </footer>
 
 
-    <script src="/Front-end/assets/js/main.js"></script>
-
     <!--=============== SCROLL UP ===============-->
     <a href="#" class="scrollup" id="scroll-up">
         <i class="ri-arrow-up-fill scrollup__icon"></i>
@@ -195,8 +149,6 @@
 
     <!--=============== MAIN JS ===============-->
     <script src="assets/js/main.js"></script>
-</body>
-
 </body>
 
 </html>

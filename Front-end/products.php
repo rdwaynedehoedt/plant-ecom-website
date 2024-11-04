@@ -11,18 +11,18 @@
 </head>
 
 <body>
-    <header class="header" id="header">
+<header class="header" id="header">
         <nav class="nav container">
-            <a href="#" class="nav__logo">
+            <a href="/PLANT-ECOM-WEBSITE/Front-end/index.php" class="nav__logo">
                 <i class="ri-leaf-line nav__logo-icon"></i> PlantPedia
             </a>
 
             <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list">
-                    <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
-                    <li class="nav__item"><a href="about.html" class="nav__link">About</a></li>
-                    <li class="nav__item"><a href="products.html" class="nav__link">Products</a></li>
-                    <li class="nav__item"><a href="contact.html" class="nav__link">Contact Us</a></li>
+                    <li class="nav__item"><a href="/PLANT-ECOM-WEBSITE/Front-end/index.php" class="nav__link">Home</a></li>
+                    <li class="nav__item"><a href="/PLANT-ECOM-WEBSITE/Front-end/about.php" class="nav__link">About</a></li>
+                    <li class="nav__item"><a href="/PLANT-ECOM-WEBSITE/Front-end/products.php" class="nav__link">Products</a></li>
+                    <li class="nav__item"><a href="/PLANT-ECOM-WEBSITE/Front-end/contact.php" class="nav__link">Contact Us</a></li>
                 </ul>
 
                 <div class="nav__close" id="nav-close">
@@ -40,35 +40,102 @@
             </div>
             <div class="nav__btns">
                 <a href="login.html" class="Login_button--flex">
-                    Login <i class="ri-login-box-line    button__icon"></i>
+                    Login <i class="ri-login-box-line button__icon"></i>
                 </a>
             </div>
         </nav>
     </header>
 
-    <section class="product-detail container">
-        <div class="product-detail__header">
-            <h1 class="product-detail__title">Product Title</h1>
-        </div>
+    <section class="product section container" id="products">
+        <h2 class="section__title-center">
+            Check out our <br> products
+        </h2>
 
-        <div class="product-detail__content">
-            <div class="product-detail__image">
-                <img src="assets/img/product1.png" alt="Product Image">
-            </div>
+        <p class="product__description">
+            Here are some selected plants from our showroom, all are in excellent
+            shape and has a long life span. Buy and enjoy best quality.
+        </p>
 
-            <div class="product-detail__description">
-                <p>
-                    Here is the description of the product. It provides details and highlights of the product features.
-                </p>
-                <!-- Buttons moved here under description -->
-                <div class="product-detail__actions">
-                    <button class="button button--primary small-button">Buy</button>
-                    <button class="button button--secondary small-button">Add to Cart</button>
-                </div>
-            </div>
+        <div class="product__container grid">
+            <article class="product__card">
+                <div class="product__circle"></div>
+
+                <img src="assets/img/product1.png" alt="" class="product__img">
+
+                <h3 class="product__title">Cacti Plant</h3>
+                <span class="product__price">$19.99</span>
+
+                <a href="p1.html" class="button--flex product__button">
+                    <i class="ri-shopping-bag-line"></i>
+                </a>
+            </article>
+
+            <article class="product__card">
+                <div class="product__circle"></div>
+
+                <img src="assets/img/product2.png" alt="" class="product__img">
+
+                <h3 class="product__title">Cactus Plant</h3>
+                <span class="product__price">$11.99</span>
+
+                <button class="button--flex product__button">
+                    <i class="ri-shopping-bag-line"></i>
+                </button>
+            </article>
+
+            <article class="product__card">
+                <div class="product__circle"></div>
+
+                <img src="assets/img/product3.png" alt="" class="product__img">
+
+                <h3 class="product__title">Aloe Vera Plant</h3>
+                <span class="product__price">$7.99</span>
+
+                <button class="button--flex product__button">
+                    <i class="ri-shopping-bag-line"></i>
+                </button>
+            </article>
+
+            <article class="product__card">
+                <div class="product__circle"></div>
+
+                <img src="assets/img/product4.png" alt="" class="product__img">
+
+                <h3 class="product__title">Succulent Plant</h3>
+                <span class="product__price">$5.99</span>
+
+                <button class="button--flex product__button">
+                    <i class="ri-shopping-bag-line"></i>
+                </button>
+            </article>
+
+            <article class="product__card">
+                <div class="product__circle"></div>
+
+                <img src="assets/img/product5.png" alt="" class="product__img">
+
+                <h3 class="product__title">Succulent Plant</h3>
+                <span class="product__price">$10.99</span>
+
+                <button class="button--flex product__button">
+                    <i class="ri-shopping-bag-line"></i>
+                </button>
+            </article>
+
+            <article class="product__card">
+                <div class="product__circle"></div>
+
+                <img src="assets/img/product6.png" alt="" class="product__img">
+
+                <h3 class="product__title">Green Plant</h3>
+                <span class="product__price">$8.99</span>
+
+                <button class="button--flex product__button">
+                    <i class="ri-shopping-bag-line"></i>
+                </button>
+            </article>
         </div>
     </section>
-
 
     <footer class="footer section">
         <div class="footer__container container grid">
@@ -149,6 +216,8 @@
 
     <!--=============== MAIN JS ===============-->
     <script src="assets/js/main.js"></script>
+</body>
+
 </body>
 
 </html>
