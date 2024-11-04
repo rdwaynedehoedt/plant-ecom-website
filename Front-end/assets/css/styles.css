@@ -1241,14 +1241,16 @@ the website, in dark theme
 }
 
 .product-detail__title {
-  font-size: var(--big-font-size);
+  font-size: var(--h3-font-size);
+  /* Smaller than h2 font size */
   font-weight: var(--font-semi-bold);
   color: var(--title-color);
   margin-bottom: var(--mb-0-5);
 }
 
 .product-detail__subtitle {
-  font-size: var(--h2-font-size);
+  font-size: var(--small-font-size);
+  /* Smaller than h3 font size */
   color: var(--text-color-light);
   margin-bottom: var(--mb-2);
 }
@@ -1328,4 +1330,11 @@ the website, in dark theme
   .product-detail__description {
     text-align: center;
   }
+}
+
+.small-button {
+  padding: 8px 16px;
+  /* Smaller padding */
+  font-size: 0.8rem;
+  /* Smaller font size */
 }
