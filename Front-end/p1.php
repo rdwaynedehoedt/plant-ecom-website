@@ -1,3 +1,15 @@
+<?php
+session_start();  // Start or resume a session
+
+// Redirect to login if not logged in
+if (!isset($_SESSION['user_id'])) {
+    header('Location: login.php');
+    exit();
+}
+
+// You can access session variables like this
+$userEmail = $_SESSION['email'];
+?>
 <!DOCTYPE html>
 <html lang="en">
 
