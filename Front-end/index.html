@@ -39,16 +39,9 @@
                 </div>
             </div>
             <div class="nav__btns">
-                <!-- Conditional display, check if user is logged in -->
-                <?php if(isset($_SESSION['user_id'])): ?>
-                <a href="/Front-end/user-profile.html" class="profile-icon">
-                    <i class="ri-account-circle-line"></i>
-                </a>
-                <?php else: ?>
                 <a href="login.html" class="Login_button--flex">
                     Login <i class="ri-login-box-line button__icon"></i>
                 </a>
-                <?php endif; ?>
             </div>
         </nav>
     </header>
