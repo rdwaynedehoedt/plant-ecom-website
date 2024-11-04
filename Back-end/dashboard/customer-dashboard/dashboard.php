@@ -17,33 +17,37 @@ if (!isset($_SESSION['user_id'])) {
     <title>PlantPedia</title>
 </head>
 <body>
-    <header class="header" id="header">
+<header class="header" id="header">
         <nav class="nav container">
-            <a href="/PLANT-ECOM-WEBSITE/Front-end/index.html" class="nav__logo">
+            <a href="/PLANT-ECOM-WEBSITE/Front-end/index.php" class="nav__logo">
                 <i class="ri-leaf-line nav__logo-icon"></i> PlantPedia
             </a>
+
             <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list">
-                    <li class="nav__item"><a href="/PLANT-ECOM-WEBSITE/Front-end/index.html" class="nav__link">Home</a></li>
-                    <li class="nav__item"><a href="/PLANT-ECOM-WEBSITE/Front-end/about.html" class="nav__link">About</a></li>
-                    <li class="nav__item"><a href="/PLANT-ECOM-WEBSITE/Front-end/products.html" class="nav__link">Products</a></li>
-                    <li class="nav__item"><a href="/PLANT-ECOM-WEBSITE/Front-end/contact.html" class="nav__link">Contact Us</a></li>
+                    <li class="nav__item"><a href="/PLANT-ECOM-WEBSITE/Front-end/index.php" class="nav__link">Home</a></li>
+                    <li class="nav__item"><a href="/PLANT-ECOM-WEBSITE/Front-end/about.php" class="nav__link">About</a></li>
+                    <li class="nav__item"><a href="/PLANT-ECOM-WEBSITE/Front-end/products.php" class="nav__link">Products</a></li>
+                    <li class="nav__item"><a href="/PLANT-ECOM-WEBSITE/Front-end/contact.php" class="nav__link">Contact Us</a></li>
                 </ul>
+
                 <div class="nav__close" id="nav-close">
                     <i class="ri-close-line"></i>
                 </div>
             </div>
+
             <div class="nav__btns">
-                <!-- Conditional display, check if user is logged in -->
-                <?php if(isset($_SESSION['user_id'])): ?>
-                <a href="/PLANT-ECOM-WEBSITE/Front-end/user-profile.html" class="profile-icon">
-                    <i class="ri-account-circle-line"></i>
-                </a>
-                <?php else: ?>
-                <a href="login.html" class="Login_button--flex">
+                <!-- Theme change button -->
+                <i class="ri-moon-line change-theme" id="theme-button"></i>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="ri-menu-line"></i>
+                </div>
+            </div>
+            <div class="nav__btns">
+                <a href="login.php" class="Login_button--flex">
                     Login <i class="ri-login-box-line button__icon"></i>
                 </a>
-                <?php endif; ?>
             </div>
         </nav>
     </header>

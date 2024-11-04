@@ -23,10 +23,10 @@
                     $_SESSION['role'] = $user['role'];
     
                     if ($user['role'] === 'admin') {
-                        header("Location: /PLANT-ECOM-WEBSITE/Back-end/dashboard/admin-dashboard/dashboard.php"); // Admin dashboard
+                        header("Location: /PLANT-ECOM-WEBSITE/Front-end/index.php"); // Admin dashboard
                         exit();
                     } else if ($user['role'] === 'customer') {
-                        header("Location: /PLANT-ECOM-WEBSITE/Back-end/dashboard/customer-dashboard/dashboard.php"); // Customer dashboard
+                        header("Location: /PLANT-ECOM-WEBSITE/Front-end/index.php"); // Customer dashboard
                         exit();
                     } else {
                         echo "Access Denied!";
