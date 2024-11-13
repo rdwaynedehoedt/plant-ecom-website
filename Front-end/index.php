@@ -12,6 +12,8 @@ if (!isset($_SESSION['user_id'])) {
 // You can access session variables like this
 $userEmail = $_SESSION['email'];
 ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -380,7 +382,7 @@ $userEmail = $_SESSION['email'];
                             <input type="email" placeholder=" " class="contact__input">
                             <label for="" class="contact__label">Email</label>
                         </div>
-
+                        
                         <div class="contact__content">
                             <input type="text" placeholder=" " class="contact__input">
                             <label for="" class="contact__label">Subject</label>
