@@ -1,14 +1,5 @@
 <?php
-session_start();  // Start or resume a session
-
-// Redirect to login if not logged in
-if (!isset($_SESSION['user_id'])) {
-    header('Location: login.php');
-    exit();
-}
-
-// You can access session variables like this
-$userEmail = $_SESSION['email'];
+session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -51,10 +42,22 @@ $userEmail = $_SESSION['email'];
                 </div>
             </div>
             <div class="nav__btns">
-                <a href="login.php" class="Login_button--flex">
-                    Login <i class="ri-login-box-line button__icon"></i>
-                </a>
-            </div>
+    <?php if(isset($_SESSION['user_id'])): ?>
+        <!-- Display user profile or logout if logged in -->
+        <a href="/PLANT-ECOM-WEBSITE/Back-end/auth/logout.php" class="Login_button--flex">
+            Logout <i class="ri-logout-box-r-line button__icon"></i>
+        </a>
+        <a href="profile.php" class="Login_button--flex">
+            Profile <i class="ri-user-3-line button__icon"></i>
+        </a>
+    <?php else: ?>
+        <!-- Show login button if not logged in -->
+        <a href="login.php" class="Login_button--flex">
+            Login <i class="ri-login-box-line button__icon"></i>
+        </a>
+    <?php endif; ?>
+</div>
+
         </nav>
     </header>
 
