@@ -22,7 +22,7 @@ if (!isset($_SESSION['user_id'])) {
                 <li><a href="user_management.php">Manage Users</a></li>
                 <li><a href="reports.php">View Reports</a></li>
                 <li><a href="site_settings.php">Site Settings</a></li>
-                <li><a href="logout.php">Logout</a></li>
+                <li><a href="/PLANT-ECOM-WEBSITE/Back-end/auth/logout.php">Logout</a></li>
             </ul>
         </nav>
     </header>
