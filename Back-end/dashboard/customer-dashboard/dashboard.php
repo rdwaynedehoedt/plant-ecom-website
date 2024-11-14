@@ -1,11 +1,7 @@
 <?php
 session_start();
-if (!isset($_SESSION['user_id'])) {
-    // If the user is not logged in, redirect to login page
-    header("Location: /PLANT-ECOM-WEBSITE/Front-end/login.html");
-    exit();
-}
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,9 +22,9 @@ if (!isset($_SESSION['user_id'])) {
             <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list">
                     <li class="nav__item"><a href="/PLANT-ECOM-WEBSITE/Front-end/index.php" class="nav__link">Home</a></li>
-                    <li class="nav__item"><a href="/PLANT-ECOM-WEBSITE/Front-end/about.php" class="nav__link">About</a></li>
-                    <li class="nav__item"><a href="/PLANT-ECOM-WEBSITE/Front-end/products.php" class="nav__link">Products</a></li>
-                    <li class="nav__item"><a href="/PLANT-ECOM-WEBSITE/Front-end/contact.php" class="nav__link">Contact Us</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link">Oder History</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link">Favourite</a></li>
+
                 </ul>
 
                 <div class="nav__close" id="nav-close">
@@ -44,11 +40,20 @@ if (!isset($_SESSION['user_id'])) {
                     <i class="ri-menu-line"></i>
                 </div>
             </div>
-            <div class="nav__btns">
-                <a href="login.php" class="Login_button--flex">
-                    Login <i class="ri-login-box-line button__icon"></i>
-                </a>
-            </div>
+            <?php if(isset($_SESSION['user_id'])): ?>
+        <!-- Display user profile or logout if logged in -->
+        <a href="/PLANT-ECOM-WEBSITE/Back-end/auth/logout.php" class="Login_button--flex">
+            Logout <i class="ri-logout-box-r-line button__icon"></i>
+        </a>
+        <a href="/PLANT-ECOM-WEBSITE/Back-end/dashboard/customer-dashboard/dashboard.php" class="Login_button--flex">
+            Profile <i class="ri-user-3-line button__icon"></i>
+        </a>
+    <?php else: ?>
+        <!-- Show login button if not logged in -->
+        <a href="login.php" class="Login_button--flex">
+            Login <i class="ri-login-box-line button__icon"></i>
+        </a>
+    <?php endif; ?>
         </nav>
     </header>
 
