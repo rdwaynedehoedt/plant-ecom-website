@@ -52,11 +52,14 @@ session_start();
         <!-- Show login button if not logged in -->
         <a href="login.php" class="Login_button--flex">
             Login <i class="ri-login-box-line button__icon"></i>
-        </a>
+        </a>http://localhost/PLANT-ECOM-WEBSITE/Front-end/about.php
     <?php endif; ?>
         </nav>
     </header>
 
+    <div>
+        <h1>HELLO</h1>
+    </div>
     <!-- Add your site or application content here -->
     <p>Hello! This is your homepage after login.</p>
 </body>
