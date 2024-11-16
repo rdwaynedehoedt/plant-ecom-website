@@ -58,11 +58,9 @@ session_start();
 
         <aside class="profile-card">
             <header>
-                <a target="_blank" href="#">
-                    <img src="https://via.placeholder.com/150" alt="User Avatar" class="profile-avatar">
-                </a>
-                <h1>John Doe</h1>
-                <h2>Plant Enthusiast</h2>
+                    <img src="/PLANT-ECOM-WEBSITE/Front-end/assets/img/Profile icon.png" alt="User Avatar" class="profile-avatar">
+                <h1>Test User</h1>
+                <h2>customer</h2>
             </header>
             <div class="profile-bio">
                 <p>Passionate about plants and dedicated to bringing nature closer to you. Let's grow together!</p>
