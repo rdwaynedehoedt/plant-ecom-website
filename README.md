@@ -78,6 +78,7 @@ PlantPedia can be used to:
 - **Cart System**: Implement a shopping cart system to allow users to purchase multiple items.
 - **Enhanced Animations**: Improve the UI with smoother animations and transitions.
 
+
 ## Contributing
 
 Contributions are welcome! Feel free to open an issue or submit a pull request to help improve the website.
