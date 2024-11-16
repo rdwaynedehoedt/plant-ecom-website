@@ -11,7 +11,12 @@ session_start();
     <link rel="stylesheet" href="/PLANT-ECOM-WEBSITE/Front-end/assets/css/styles.css">
     <link rel="stylesheet" href="/plant-ecom-website/Back-end/dashboard/customer/style.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+<<<<<<< HEAD
     <title>User Profile - PlantPedia</title>
+=======
+    <link rel="stylesheet" href="/PLANT-ECOM-WEBSITE/Back-end/dashboard/customer/style.css">
+    <title>PlantPedia</title>
+>>>>>>> cedb45215d7c6081cc8d5e597662286e115084ca
 </head>
 <body>
     <header class="header" id="header">
@@ -53,6 +58,7 @@ session_start();
             <?php endif; ?>
         </nav>
     </header>
+<<<<<<< HEAD
     <main class="main">
     <section class="home2" id="home2">
     <section class="profile-container">
@@ -77,5 +83,10 @@ session_start();
     </section>
     </section>
     </main>
+=======
+
+
+
+>>>>>>> cedb45215d7c6081cc8d5e597662286e115084ca
 </body>
 </html>
