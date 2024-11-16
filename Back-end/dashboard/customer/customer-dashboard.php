@@ -46,9 +46,6 @@ session_start();
                 <a href="/PLANT-ECOM-WEBSITE/Back-end/auth/logout.php" class="Login_button--flex">
                     Logout <i class="ri-logout-box-r-line button__icon"></i>
                 </a>
-                <a href="/PLANT-ECOM-WEBSITE/Back-end/dashboard/customer-dashboard/dashboard.php" class="Login_button--flex">
-                    Profile <i class="ri-user-3-line button__icon"></i>
-                </a>
             <?php else: ?>
                 <a href="login.php" class="Login_button--flex">
                     Login <i class="ri-login-box-line button__icon"></i>
@@ -59,7 +56,7 @@ session_start();
 
     <main class="main">
     <section class="home2" id="home2">
-    <section class="profile-container">
+
         <aside class="profile-card">
             <header>
                 <a target="_blank" href="#">
@@ -78,7 +75,7 @@ session_start();
                 <li><a target="_blank" href="#"><i class="ri-instagram-fill"></i></a></li>
             </ul>
         </aside>
-    </section>
+
     </section>
     </main>
 

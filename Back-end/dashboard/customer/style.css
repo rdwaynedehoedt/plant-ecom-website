@@ -6,14 +6,7 @@ body.dark-theme {
   --container-color: hsl(var(--hue), 8%, 16%);
 }
 
-/* User Profile Page Styles */
-.profile-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 2rem;
-  background-color:#fff;
-}
+
 
 
 .profile-container{

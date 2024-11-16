@@ -308,7 +308,10 @@ the website, in dark theme
 }
 
 .home2 {
-  padding: 4.5rem 0 2rem;
+  padding: .5rem 0 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 

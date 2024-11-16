@@ -147,3 +147,4 @@ sr.reveal(`.steps__card, .product__card, .questions__group, .footer`, { interval
 sr.reveal(`.left-side-login`, { origin: 'left' })
 sr.reveal(`.right-side-login`, { origin: 'right' })
 sr.reveal(`.section__title-center`)
+sr.reveal(`.home2`)
