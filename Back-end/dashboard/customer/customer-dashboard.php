@@ -57,10 +57,16 @@ session_start();
         </nav>
     </header>
 
-    <div>
-        <h1>HELLO</h1>
+    <main class="main">
+    <section class="home" id="home">
+    <div class="home__data">
+                    <h1 class="h2-font-size">
+                        Welcome to PlantPedia
+                    </h1>
+
     </div>
-    <!-- Add your site or application content here -->
-    <p>Hello! This is your homepage after login.</p>
+    </section>
+    </main>
+
 </body>
 </html>
