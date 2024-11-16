@@ -9,7 +9,6 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="/PLANT-ECOM-WEBSITE/Front-end/assets/img/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="/PLANT-ECOM-WEBSITE/Front-end/assets/css/styles.css">
-    <link rel="stylesheet" href="/plant-ecom-website/Back-end/dashboard/customer/style.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <title>User Profile - PlantPedia</title>
     <link rel="stylesheet" href="/PLANT-ECOM-WEBSITE/Back-end/dashboard/customer/style.css">
