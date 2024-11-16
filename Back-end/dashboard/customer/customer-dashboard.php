@@ -53,6 +53,8 @@ session_start();
         </nav>
     </header>
 
+
+    
     <main class="main">
     <section class="home2" id="home2">
 
