@@ -48,11 +48,11 @@ session_start();
     Logout <i class="ri-logout-box-r-line button__icon"></i>
 </a>
 <?php if ($_SESSION['role'] == 'admin'): ?>
-    <a href="/PLANT-ECOM-WEBSITE/Back-end/dashboard/admin-dashboard.php" class="Login_button--flex">
+    <a href="/PLANT-ECOM-WEBSITE/Back-end/dashboard/admin/admin-dashboard.php" class="Login_button--flex">
          Dashboard <i class="ri-dashboard-line button__icon"></i>
     </a>
 <?php elseif ($_SESSION['role'] == 'customer'): ?>
-    <a href="/PLANT-ECOM-WEBSITE/Back-end/dashboard/customer-dashboard.php" class="Login_button--flex">
+    <a href="/PLANT-ECOM-WEBSITE/Back-end/dashboard/customer/customer-dashboard.php" class="Login_button--flex">
         Profile <i class="ri-user-3-line button__icon"></i>
     </a>
 <?php endif; ?>
