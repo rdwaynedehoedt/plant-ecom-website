@@ -23,7 +23,7 @@
                     $_SESSION['role'] = $user['role'];
     
                     if ($user['role'] === 'admin') {
-                        header("Location: /PLANT-ECOM-WEBSITE/Back-end/dashboard/admin-dashboard/dashboard.php"); 
+                        header("Location: /PLANT-ECOM-WEBSITE/Back-end/dashboard/admin-dashboard.php"); 
                         exit();
                     } else if ($user['role'] === 'customer') {
                         header("Location: /PLANT-ECOM-WEBSITE/Front-end/index.php"); // Customer dashboard

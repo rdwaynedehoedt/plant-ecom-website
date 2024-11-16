@@ -52,7 +52,7 @@ session_start();
     </a>
     <?php if ($_SESSION['role'] == 'admin'): ?>
         <a href="/PLANT-ECOM-WEBSITE/Back-end/dashboard/admin-dashboard.php" class="Login_button--flex">
-            Admin Dashboard <i class="ri-dashboard-line button__icon"></i>
+            Dashboard <i class="ri-dashboard-line button__icon"></i>
         </a>
     <?php elseif ($_SESSION['role'] == 'customer'): ?>
         <a href="/PLANT-ECOM-WEBSITE/Back-end/dashboard/customer-dashboard.php" class="Login_button--flex">
