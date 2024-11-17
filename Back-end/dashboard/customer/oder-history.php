@@ -241,6 +241,7 @@ session_start();
     </ul>
 </div>
 
+
     </section>
     </main>
         <p class="footer__copy">&#169; DwayneFX 2024. All rigths reserved</p>
