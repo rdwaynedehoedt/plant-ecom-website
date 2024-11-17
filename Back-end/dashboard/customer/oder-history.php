@@ -180,7 +180,6 @@ session_start();
     
     <main class="main">
     <section class="home2" id="home2">
-
     <div class="order-history-container">
     <h2>Order History</h2>
     <ul class="order-list">
@@ -244,11 +243,6 @@ session_start();
 
     </section>
     </main>
-
-
-    
-
-
         <p class="footer__copy">&#169; DwayneFX 2024. All rigths reserved</p>
       <!--=============== SCROLL UP ===============-->
       <a href="#" class="scrollup" id="scroll-up">
