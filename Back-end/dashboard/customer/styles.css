@@ -1,0 +1,181 @@
+:root {
+    --header-height: 3.5rem;
+    /*========== Colors ==========*/
+    /*Color mode HSL(hue, saturation, lightness)*/
+    --hue: 152;
+    --first-color: hsl(var(--hue), 24%, 32%);
+    --first-color-alt: hsl(var(--hue), 24%, 28%);
+    --first-color-light: hsl(var(--hue), 24%, 66%);
+    --first-color-lighten: hsl(var(--hue), 24%, 92%);
+    --title-color: hsl(var(--hue), 4%, 15%);
+    --text-color: hsl(var(--hue), 4%, 35%);
+    --text-color-light: hsl(var(--hue), 4%, 55%);
+    --body-color: hsl(var(--hue), 0%, 100%);
+    --container-color: #FFF;
+  
+    /*========== Font and typography ==========*/
+    /*.5rem = 8px | 1rem = 16px ...*/
+    --body-font: 'Poppins', sans-serif;
+    --big-font-size: 2rem;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1rem;
+    --normal-font-size: .938rem;
+    --small-font-size: .813rem;
+    --smaller-font-size: .75rem;
+  
+    /*========== Font weight ==========*/
+    --font-medium: 500;
+    --font-semi-bold: 600;
+  
+    /*========== Margenes Bottom ==========*/
+    /*.5rem = 8px | 1rem = 16px ...*/
+    --mb-0-5: .5rem;
+    --mb-0-75: .75rem;
+    --mb-1: 1rem;
+    --mb-1-5: 1.5rem;
+    --mb-2: 2rem;
+    --mb-2-5: 2.5rem;
+  
+    /*========== z index ==========*/
+    --z-tooltip: 10;
+    --z-fixed: 100;
+  }
+  
+  /* Responsive typography */
+  @media screen and (min-width: 968px) {
+    :root {
+      --big-font-size: 3.5rem;
+      --h1-font-size: 2.25rem;
+      --h2-font-size: 1.5rem;
+      --h3-font-size: 1.25rem;
+      --normal-font-size: 1rem;
+      --small-font-size: .875rem;
+      --smaller-font-size: .813rem;
+    }
+  }
+  
+
+
+
+  
+/* Order History Container */
+.order-history-container {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Style */
+.order-history-container h2 {
+    text-align: center;
+    color: #000000;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+/* Order List */
+.order-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Order Item */
+.order-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background: #fff;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Product Image */
+.product-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-right: 15px;
+}
+
+/* Order Details */
+.order-details {
+    flex-grow: 1;
+    max-width: 60%;
+}
+
+.order-details h3 {
+    font-size: 14px;
+    color: #333;
+    margin: 0;
+    font-weight: 600;
+}
+
+.order-details p {
+    font-size: 12px;
+    color: #666;
+    margin: 2px 0;
+}
+
+/* Order Status */
+.order-status {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    min-width: 120px;
+}
+
+.timeline-icon {
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    background-color: #4caf50;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+/* Status Indicator */
+.status-indicator {
+    display: block;
+    font-size: 12px;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Status Colors */
+.order-placed {
+    background-color: #ff9800;
+}
+
+.shipping {
+    background-color: #4caf50;
+}
+
+.out-for-delivery {
+    background-color: #2196f3;
+}
+
+.delivered {
+    background-color: #8bc34a;
+}
+
+/* Timeline Date */
+.timeline-date {
+    font-size: 11px;
+    color: #999;
+    margin-top: 5px;
+}
