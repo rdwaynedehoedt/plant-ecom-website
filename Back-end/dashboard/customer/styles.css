@@ -39,7 +39,7 @@ body.dark-theme {
     margin: 0;
 }
 
-.dark-theme .order-list {
+.order-list {
     background-color: var(--first-color-dark);
 }
 
