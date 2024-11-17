@@ -10,9 +10,8 @@ session_start();
     <link rel="shortcut icon" href="/PLANT-ECOM-WEBSITE/Front-end/assets/img/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="/PLANT-ECOM-WEBSITE/Front-end/assets/css/styles.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="/PLANT-ECOM-WEBSITE/Back-end/dashhboard/customer/styles.css">
     <title>User Profile - PlantPedia</title>
-    <link rel="stylesheet" href="/PLANT-ECOM-WEBSITE/Back-end/dashboard/customer/style.css">
-    <title>PlantPedia</title>
 
 </head>
 <body>
@@ -58,26 +57,26 @@ session_start();
     <main class="main">
     <section class="home2" id="home2">
 
-        <aside class="profile-card">
-            <header>
-                    <img src="/PLANT-ECOM-WEBSITE/Front-end/assets/img/Profile icon.png" alt="User Avatar" class="profile-avatar">
-                <h1>Test User</h1>
-                <h2>customer</h2>
-            </header>
-            <div class="profile-bio">
-                <p>Passionate about plants and dedicated to bringing nature closer to you. Let's grow together!</p>
-            </div>
-            <ul class="profile-social-links">
-                <li><a target="_blank" href="#"><i class="ri-facebook-fill"></i></a></li>
-                <li><a target="_blank" href="#"><i class="ri-twitter-fill"></i></a></li>
-                <li><a target="_blank" href="#"><i class="ri-github-fill"></i></a></li>
-                <li><a target="_blank" href="#"><i class="ri-instagram-fill"></i></a></li>
-            </ul>
-        </aside>
+    <aside class="profile-card">
+    <header>
+        <img src="/PLANT-ECOM-WEBSITE/Front-end/assets/img/Profile icon.png" alt="User Avatar" class="profile-avatar">
+        <h1>Test User</h1>
+        <h2>Customer</h2>
+    </header>
+    <div class="profile-bio">
+        <p>Passionate about plants and dedicated to bringing nature closer to you. Let's grow together!</p>
+    </div>
+    <div>
+        <button class="button button--flex">Update Profile</button>
+    </div>
+</aside>
+
 
     </section>
     </main>
 
+
+        <p class="footer__copy">&#169; DwayneFX 2024. All rigths reserved</p>
       <!--=============== SCROLL UP ===============-->
       <a href="#" class="scrollup" id="scroll-up">
         <i class="ri-arrow-up-fill scrollup__icon"></i>
