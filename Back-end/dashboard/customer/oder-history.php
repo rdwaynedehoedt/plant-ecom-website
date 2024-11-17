@@ -16,7 +16,7 @@ session_start();
     <style>
 /* Order History Container */
 .order-history-container {
-    max-width: 600px;
+    max-width: 700px;
     margin: 0 auto;
     padding: 20px;
     background: #f9f9f9;
@@ -27,7 +27,8 @@ session_start();
 /* Header Style */
 .order-history-container h2 {
     text-align: center;
-    color: #4caf50;
+    color: #000000;
+    font-size: 20px;
     margin-bottom: 20px;
 }
 
@@ -42,7 +43,7 @@ session_start();
 .order-item {
     display: flex;
     align-items: center;
-    padding: 15px;
+    padding: 10px;
     background: #fff;
     border-radius: 15px;
     margin-bottom: 15px;
@@ -51,8 +52,8 @@ session_start();
 
 /* Product Image */
 .product-image {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     border-radius: 10px;
     object-fit: cover;
     margin-right: 15px;
@@ -61,29 +62,34 @@ session_start();
 /* Order Details */
 .order-details {
     flex-grow: 1;
+    max-width: 60%;
 }
 
 .order-details h3 {
-    font-size: 16px;
+    font-size: 14px;
     color: #333;
     margin: 0;
+    font-weight: 600;
 }
 
 .order-details p {
-    font-size: 14px;
+    font-size: 12px;
     color: #666;
-    margin: 5px 0;
+    margin: 2px 0;
 }
 
 /* Order Status */
 .order-status {
-    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    min-width: 120px;
 }
 
 .timeline-icon {
     display: inline-block;
-    width: 24px;
-    height: 24px;
+    width: 22px;
+    height: 22px;
     background-color: #4caf50;
     color: #fff;
     border-radius: 50%;
@@ -91,6 +97,7 @@ session_start();
     justify-content: center;
     align-items: center;
     margin-bottom: 5px;
+    font-size: 14px;
 }
 
 /* Status Indicator */
@@ -101,6 +108,7 @@ session_start();
     padding: 5px 10px;
     border-radius: 20px;
     font-weight: bold;
+    text-align: center;
 }
 
 /* Status Colors */
@@ -122,8 +130,9 @@ session_start();
 
 /* Timeline Date */
 .timeline-date {
-    font-size: 12px;
+    font-size: 11px;
     color: #999;
+    margin-top: 5px;
 }
 
     </style>
@@ -136,9 +145,10 @@ session_start();
             </a>
 
             <div class="nav__menu" id="nav-menu">
-                <ul class="nav__list">
+            <ul class="nav__list">
                     <li class="nav__item"><a href="/PLANT-ECOM-WEBSITE/Front-end/index.php" class="nav__link">Home</a></li>
-                    <li class="nav__item"><a href="#" class="nav__link">Order History</a></li>
+                    <li class="nav__item"><a href="/PLANT-ECOM-WEBSITE/Back-end/dashboard/customer/customer-dashboard.php" class="nav__link">Profile</a></li>
+                    <li class="nav__item"><a href="/PLANT-ECOM-WEBSITE/Back-end/dashboard/customer/oder-history.php" class="nav__link">Order History</a></li>
                     <li class="nav__item"><a href="#" class="nav__link">Favourites</a></li>
                 </ul>
 
@@ -171,30 +181,11 @@ session_start();
     <main class="main">
     <section class="home2" id="home2">
 
-    <aside class="profile-card">
-    <header>
-        <img src="/PLANT-ECOM-WEBSITE/Front-end/assets/img/Profile icon.png" alt="User Avatar" class="profile-avatar">
-        <h1>Test User</h1>
-        <h2>Customer</h2>
-    </header>
-    <div class="profile-bio">
-        <p>Passionate about plants and dedicated to bringing nature closer to you. Let's grow together!</p>
-    </div>
-    <div>
-        <button class="button button--flex">Update Profile</button>
-    </div>
-</aside>
-
-
-    </section>
-    </main>
-
-
     <div class="order-history-container">
     <h2>Order History</h2>
     <ul class="order-list">
         <li class="order-item">
-            <img src="/img/plant1.jpg" alt="Product Image" class="product-image">
+            <img src="/PLANT-ECOM-WEBSITE/Front-end/assets/img/product1.png" alt="Product Image" class="product-image">
             <div class="order-details">
                 <h3>Mini Cactus</h3>
                 <p>$10.99</p>
@@ -208,7 +199,7 @@ session_start();
         </li>
 
         <li class="order-item">
-            <img src="/img/plant2.jpg" alt="Product Image" class="product-image">
+            <img src="/PLANT-ECOM-WEBSITE/Front-end/assets/img/product2.png" alt="Product Image" class="product-image">
             <div class="order-details">
                 <h3>Fiddle Leaf Fig</h3>
                 <p>$25.99</p>
@@ -222,7 +213,7 @@ session_start();
         </li>
 
         <li class="order-item">
-            <img src="/img/plant3.jpg" alt="Product Image" class="product-image">
+            <img src="/PLANT-ECOM-WEBSITE/Front-end/assets/img/product3.png" alt="Product Image" class="product-image">
             <div class="order-details">
                 <h3>Snake Plant</h3>
                 <p>$19.99</p>
@@ -236,7 +227,7 @@ session_start();
         </li>
 
         <li class="order-item">
-            <img src="/img/plant4.jpg" alt="Product Image" class="product-image">
+            <img src="/PLANT-ECOM-WEBSITE/Front-end/assets/img/product4.png" alt="Product Image" class="product-image">
             <div class="order-details">
                 <h3>Monstera Deliciosa</h3>
                 <p>$29.99</p>
@@ -250,6 +241,12 @@ session_start();
         </li>
     </ul>
 </div>
+
+    </section>
+    </main>
+
+
+    
 
 
         <p class="footer__copy">&#169; DwayneFX 2024. All rigths reserved</p>
