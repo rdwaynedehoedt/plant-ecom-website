@@ -1,64 +1,11 @@
-:root {
-    --header-height: 3.5rem;
-    /*========== Colors ==========*/
-    /*Color mode HSL(hue, saturation, lightness)*/
-    --hue: 152;
-    --first-color: hsl(var(--hue), 24%, 32%);
-    --first-color-alt: hsl(var(--hue), 24%, 28%);
-    --first-color-light: hsl(var(--hue), 24%, 66%);
-    --first-color-lighten: hsl(var(--hue), 24%, 92%);
-    --title-color: hsl(var(--hue), 4%, 15%);
-    --text-color: hsl(var(--hue), 4%, 35%);
-    --text-color-light: hsl(var(--hue), 4%, 55%);
-    --body-color: hsl(var(--hue), 0%, 100%);
-    --container-color: #FFF;
-  
-    /*========== Font and typography ==========*/
-    /*.5rem = 8px | 1rem = 16px ...*/
-    --body-font: 'Poppins', sans-serif;
-    --big-font-size: 2rem;
-    --h1-font-size: 1.5rem;
-    --h2-font-size: 1.25rem;
-    --h3-font-size: 1rem;
-    --normal-font-size: .938rem;
-    --small-font-size: .813rem;
-    --smaller-font-size: .75rem;
-  
-    /*========== Font weight ==========*/
-    --font-medium: 500;
-    --font-semi-bold: 600;
-  
-    /*========== Margenes Bottom ==========*/
-    /*.5rem = 8px | 1rem = 16px ...*/
-    --mb-0-5: .5rem;
-    --mb-0-75: .75rem;
-    --mb-1: 1rem;
-    --mb-1-5: 1.5rem;
-    --mb-2: 2rem;
-    --mb-2-5: 2.5rem;
-  
-    /*========== z index ==========*/
-    --z-tooltip: 10;
-    --z-fixed: 100;
+body.dark-theme {
+    --first-color-dark: hsl(var(--hue), 8%, 20%);
+    --title-color: hsl(var(--hue), 4%, 95%);
+    --text-color: hsl(var(--hue), 4%, 75%);
+    --body-color: hsl(var(--hue), 8%, 12%);
+    --container-color: hsl(var(--hue), 8%, 16%);
   }
-  
-  /* Responsive typography */
-  @media screen and (min-width: 968px) {
-    :root {
-      --big-font-size: 3.5rem;
-      --h1-font-size: 2.25rem;
-      --h2-font-size: 1.5rem;
-      --h3-font-size: 1.25rem;
-      --normal-font-size: 1rem;
-      --small-font-size: .875rem;
-      --smaller-font-size: .813rem;
-    }
-  }
-  
 
-
-
-  
 /* Order History Container */
 .order-history-container {
     max-width: 700px;
@@ -69,6 +16,10 @@
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+.dark-theme .order-history-container {
+    background-color: var(--first-color-dark);
+  }
+
 /* Header Style */
 .order-history-container h2 {
     text-align: center;
@@ -77,11 +28,19 @@
     margin-bottom: 20px;
 }
 
+.dark-theme .order-history-container h2{
+    color: var(--title-color);
+}
+
 /* Order List */
 .order-list {
     list-style: none;
     padding: 0;
     margin: 0;
+}
+
+.dark-theme .order-list {
+    background-color: var(--first-color-dark);
 }
 
 /* Order Item */
@@ -95,10 +54,14 @@
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
+.dark-theme .order-item{
+    color: var(--first-color-Dark)
+}
+
 /* Product Image */
 .product-image {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 90px;
     border-radius: 10px;
     object-fit: cover;
     margin-right: 15px;

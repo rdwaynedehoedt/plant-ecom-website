@@ -74,7 +74,6 @@ session_start();
                 <span class="timeline-date">Nov 15, 2024</span>
             </div>
         </li>
-
         <li class="order-item">
             <img src="/PLANT-ECOM-WEBSITE/Front-end/assets/img/product2.png" alt="Product Image" class="product-image">
             <div class="order-details">
