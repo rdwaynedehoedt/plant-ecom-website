@@ -155,21 +155,20 @@ session_start();
             </p>
 
             <div class="product__container grid">
+            <a href="p1.php" class="product__card-link">
+    <article class="product__card">
+        <div class="product__circle"></div>
 
-                <article class="product__card">
-                    <div class="product__circle"></div>
+        <img src="assets/img/product1.png" alt="Cacti Plant" class="product__img">
 
-                    <img src="assets/img/product1.png" alt="" class="product__img">
+        <h3 class="product__title">Cacti Plant</h3>
+        <span class="product__price">$19.99</span>
 
-                    <h3 class="product__title">Cacti Plant</h3>
-                    <span class="product__price">$19.99</span>
-
-                    <button class="button--flex product__button">
-                        <i class="ri-shopping-bag-line"></i>
-                    </button>
-                </article>
-
-
+        <button class="button--flex product__button">
+            <i class="ri-shopping-bag-line"></i>
+        </button>
+    </article>
+</a>
                 <article class="product__card">
                     <div class="product__circle"></div>
 
