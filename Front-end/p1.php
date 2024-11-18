@@ -14,7 +14,7 @@ session_start();
     <style>
         /* Compact Product Detail Section */
         .product-detail {
-            padding: 4rem 1rem;
+            padding: 9rem 1rem;
             max-width: 800px;
             margin: 0 auto;
             background-color: #f9f9f9;
@@ -151,6 +151,15 @@ session_start();
                 <li class="nav__item"><a href="/PLANT-ECOM-WEBSITE/Front-end/contact.php" class="nav__link">Contact Us</a></li>
             </ul>
         </div>
+
+        <div class="nav__btns">
+                <!-- Theme change button -->
+                <i class="ri-moon-line change-theme" id="theme-button"></i>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="ri-menu-line"></i>
+                </div>
+            </div>
 
         <div class="nav__btns">
             <?php if (isset($_SESSION['user_id'])): ?>
