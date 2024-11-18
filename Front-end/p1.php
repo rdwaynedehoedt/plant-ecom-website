@@ -201,9 +201,9 @@ session_start();
                 <li><strong>Light:</strong> Bright, indirect sunlight</li>
             </ul>
             <div class="product-detail__actions">
-                <button class="button button--primary small-button">Buy Now</button>
-                <button class="button button--secondary small-button"><i class="ri-shopping-cart-line"></i> Add to Cart</button>
-                <button class="button button--tertiary small-button"><i class="ri-heart-line"></i> Favourites</button>
+                <button class="button button--flex ">Buy Now</button>
+                <button class="button button--flex"><i class="ri-shopping-cart-line"></i> Add to Cart</button>
+                <button class="button button--flex"><i class="ri-heart-line"></i> Favourites</button>
             </div>
         </div>
     </div>
