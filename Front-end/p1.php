@@ -9,26 +9,26 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="/PLANT-ECOM-WEBSITE/Front-end/assets/css/styles.css">
     <title>PlantPedia</title>
     <style>
         /* Compact Product Detail Section */
         .product-detail {
-            padding: 9rem 1rem;
+            padding: 3rem 1rem;
             max-width: 800px;
-            margin: 0 auto;
+            margin: 6rem auto;
             background-color: #f9f9f9;
             border-radius: 15px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
         }
 
         .product-detail__header {
             text-align: center;
-            margin-bottom: 15px;
+            margin-bottom: 1.5rem;
         }
 
         .product-detail__title {
-            font-size: 22px;
+            font-size: 24px;
             color: #333;
             font-weight: bold;
         }
@@ -36,7 +36,8 @@ session_start();
         .product-detail__content {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 15px;
+            gap: 2rem;
+            align-items: center;
         }
 
         .product-detail__image {
@@ -47,9 +48,9 @@ session_start();
 
         .product-detail__image img {
             width: 100%;
-            max-width: 300px;
+            max-width: 250px;
             border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
         }
 
         .product-detail__info {
@@ -61,38 +62,39 @@ session_start();
         .product-price {
             font-size: 20px;
             color: #4caf50;
-            margin-bottom: 8px;
+            margin-bottom: 1rem;
+            font-weight: bold;
         }
 
         .product-description {
-            font-size: 13px;
+            font-size: 14px;
             color: #555;
-            margin-bottom: 15px;
+            margin-bottom: 1rem;
         }
 
         .product-specs {
             list-style: none;
             padding: 0;
-            margin: 8px 0;
+            margin: 1rem 0;
         }
 
         .product-specs li {
-            font-size: 13px;
+            font-size: 14px;
             color: #666;
-            margin-bottom: 4px;
+            margin-bottom: 0.5rem;
         }
 
         .product-detail__actions {
             display: flex;
-            gap: 8px;
+            gap: 10px;
         }
 
         .small-button {
             flex: 1;
-            padding: 6px 10px;
-            font-size: 12px;
+            padding: 10px;
+            font-size: 14px;
             border: none;
-            border-radius: 15px;
+            border-radius: 8px;
             cursor: pointer;
             transition: background-color 0.3s ease;
         }
@@ -124,13 +126,18 @@ session_start();
             background-color: #d81b60;
         }
 
-        @media (max-width: 600px) {
+        @media (max-width: 768px) {
             .product-detail__content {
                 grid-template-columns: 1fr;
             }
 
             .product-detail__actions {
                 flex-direction: column;
+            }
+
+            .small-button {
+                flex: none;
+                margin-bottom: 10px;
             }
         }
     </style>
@@ -196,7 +203,7 @@ session_start();
             <div class="product-detail__actions">
                 <button class="button button--primary small-button">Buy Now</button>
                 <button class="button button--secondary small-button"><i class="ri-shopping-cart-line"></i> Add to Cart</button>
-                <button class="button button--tertiary small-button"><i class="ri-heart-line"></i> Add to Favourites</button>
+                <button class="button button--tertiary small-button"><i class="ri-heart-line"></i> Favourites</button>
             </div>
         </div>
     </div>
