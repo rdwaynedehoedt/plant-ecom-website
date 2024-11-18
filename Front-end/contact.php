@@ -42,26 +42,30 @@ session_start();
                     <i class="ri-menu-line"></i>
                 </div>
             </div>
+            <div class="nav__btns">
             <?php if (isset($_SESSION['user_id'])): ?>
 
-<a href="/PLANT-ECOM-WEBSITE/Back-end/auth/logout.php" class="Login_button--flex">
-    Logout <i class="ri-logout-box-r-line button__icon"></i>
-</a>
-<?php if ($_SESSION['role'] == 'admin'): ?>
-    <a href="/PLANT-ECOM-WEBSITE/Back-end/dashboard/admin/admin-dashboard.php" class="Login_button--flex">
-         Dashboard <i class="ri-dashboard-line button__icon"></i>
+    <a href="/PLANT-ECOM-WEBSITE/Back-end/auth/logout.php" class="Login_button--flex">
+        Logout <i class="ri-logout-box-r-line button__icon"></i>
     </a>
-<?php elseif ($_SESSION['role'] == 'customer'): ?>
-    <a href="/PLANT-ECOM-WEBSITE/Back-end/dashboard/customer/customer-dashboard.php" class="Login_button--flex">
-        Profile <i class="ri-user-3-line button__icon"></i>
-    </a>
-<?php endif; ?>
+    <?php if ($_SESSION['role'] == 'admin'): ?>
+        <a href="/PLANT-ECOM-WEBSITE/Back-end/dashboard/admin/admin-dashboard.php" class="Login_button--flex">
+            Dashboard <i class="ri-dashboard-line button__icon"></i>
+        </a>
+    <?php elseif ($_SESSION['role'] == 'customer'): ?>
+        <a href="/PLANT-ECOM-WEBSITE/Back-end/dashboard/customer/customer-dashboard.php" class="Login_button--flex">
+            Profile <i class="ri-user-3-line button__icon"></i>
+        </a>
+    <?php endif; ?>
 <?php else: ?>
-    
-<a href="login.php" class="Login_button--flex">
-    Login <i class="ri-login-box-line button__icon"></i>
-</a>
+    <a href="login.php" class="Login_button--flex">
+        Login <i class="ri-login-box-line button__icon"></i>
+    </a>
 <?php endif; ?>
+
+
+</div>
+
         </nav>
     </header>
 

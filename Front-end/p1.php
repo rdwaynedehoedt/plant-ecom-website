@@ -145,21 +145,25 @@ session_start();
 
 <body>
 <header class="header" id="header">
-    <nav class="nav container">
-        <a href="/PLANT-ECOM-WEBSITE/Front-end/index.php" class="nav__logo">
-            <i class="ri-leaf-line nav__logo-icon"></i> PlantPedia
-        </a>
+        <nav class="nav container">
+            <a href="/PLANT-ECOM-WEBSITE/Front-end/index.php" class="nav__logo">
+                <i class="ri-leaf-line nav__logo-icon"></i> PlantPedia
+            </a>
 
-        <div class="nav__menu" id="nav-menu">
-            <ul class="nav__list">
-                <li class="nav__item"><a href="/PLANT-ECOM-WEBSITE/Front-end/index.php" class="nav__link">Home</a></li>
-                <li class="nav__item"><a href="/PLANT-ECOM-WEBSITE/Front-end/about.php" class="nav__link">About</a></li>
-                <li class="nav__item"><a href="/PLANT-ECOM-WEBSITE/Front-end/products.php" class="nav__link">Products</a></li>
-                <li class="nav__item"><a href="/PLANT-ECOM-WEBSITE/Front-end/contact.php" class="nav__link">Contact Us</a></li>
-            </ul>
-        </div>
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="/PLANT-ECOM-WEBSITE/Front-end/index.php" class="nav__link">Home</a></li>
+                    <li class="nav__item"><a href="/PLANT-ECOM-WEBSITE/Front-end/about.php" class="nav__link">About</a></li>
+                    <li class="nav__item"><a href="/PLANT-ECOM-WEBSITE/Front-end/products.php" class="nav__link">Products</a></li>
+                    <li class="nav__item"><a href="/PLANT-ECOM-WEBSITE/Front-end/contact.php" class="nav__link">Contact Us</a></li>
+                </ul>
 
-        <div class="nav__btns">
+                <div class="nav__close" id="nav-close">
+                    <i class="ri-close-line"></i>
+                </div>
+            </div>
+
+            <div class="nav__btns">
                 <!-- Theme change button -->
                 <i class="ri-moon-line change-theme" id="theme-button"></i>
 
@@ -167,17 +171,32 @@ session_start();
                     <i class="ri-menu-line"></i>
                 </div>
             </div>
-
-        <div class="nav__btns">
+            <div class="nav__btns">
             <?php if (isset($_SESSION['user_id'])): ?>
-                <a href="/PLANT-ECOM-WEBSITE/Back-end/auth/logout.php" class="Login_button--flex">Logout <i class="ri-logout-box-r-line"></i></a>
-                <a href="profile.php" class="Login_button--flex">Profile <i class="ri-user-3-line"></i></a>
-            <?php else: ?>
-                <a href="login.php" class="Login_button--flex">Login <i class="ri-login-box-line"></i></a>
-            <?php endif; ?>
-        </div>
-    </nav>
-</header>
+
+    <a href="/PLANT-ECOM-WEBSITE/Back-end/auth/logout.php" class="Login_button--flex">
+        Logout <i class="ri-logout-box-r-line button__icon"></i>
+    </a>
+    <?php if ($_SESSION['role'] == 'admin'): ?>
+        <a href="/PLANT-ECOM-WEBSITE/Back-end/dashboard/admin/admin-dashboard.php" class="Login_button--flex">
+            Dashboard <i class="ri-dashboard-line button__icon"></i>
+        </a>
+    <?php elseif ($_SESSION['role'] == 'customer'): ?>
+        <a href="/PLANT-ECOM-WEBSITE/Back-end/dashboard/customer/customer-dashboard.php" class="Login_button--flex">
+            Profile <i class="ri-user-3-line button__icon"></i>
+        </a>
+    <?php endif; ?>
+<?php else: ?>
+    <a href="login.php" class="Login_button--flex">
+        Login <i class="ri-login-box-line button__icon"></i>
+    </a>
+<?php endif; ?>
+
+
+</div>
+
+        </nav>
+    </header>
 
 <section class="product-detail container">
     <div class="product-detail__header">
