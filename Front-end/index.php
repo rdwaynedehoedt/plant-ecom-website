@@ -83,7 +83,7 @@ session_start();
                         Bring fresh, vibrant plant designs to your office or apartment. Add a touch of greenery to
                         inspire your new ideas!
                     </p>
-                    <a href="#about" class="button button--flex">
+                    <a href="#" class="button button--flex">
                         Explore <i class="ri-arrow-right-down-line button__icon"></i>
                     </a>
                 </div>
