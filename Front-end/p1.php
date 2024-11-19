@@ -22,6 +22,10 @@ session_start();
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
         }
 
+        .product-details{
+            background-color: var(--first-color-dark);
+        }
+
         .product-detail__header {
             text-align: center;
             margin-bottom: 1.5rem;
