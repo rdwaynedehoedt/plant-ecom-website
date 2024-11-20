@@ -13,6 +13,8 @@ session_start();
     <title>PlantPedia</title>
     <style>
        
+
+       
     </style>
 </head>
 
