@@ -14,6 +14,7 @@ session_start();
     <title>User Profile - PlantPedia</title>
 
 </head>
+
 <body>
     <header class="header" id="header">
         <nav class="nav container">
