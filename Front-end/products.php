@@ -1,6 +1,32 @@
 <?php
 session_start();
+
+include ('/xampp/htdocs/plant-ecom-website/Back-end/config/db.php');
+
+$stm = $mysqli->prepare("SELECT * FROM products WHERE id =  ?");
+$stm->bind_param("i", $_GET['id']);
+$stm->execute();
+$result = $stm->get_result();
+
+if ($result->num_rows >= 1) {
+    $product = $result->fetch_assoc();
+
+    $product_id = $product['id'];
+    $product_name = $product['name'];
+    $product_price = $product['price'];
+    $product_description = $product['description'];
+    $product_image = $product['image_url'];
+    $product_plant_type = $product['plant_type'];
+    $product_size = $product['size'];
+    $product_watering = $product['watering'];
+    $product_light = $product['light'];
+
+} else {
+    echo "No products found!";
+    exit();
+}
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -34,8 +60,7 @@ session_start();
             </div>
 
             <div class="nav__btns">
-                <!-- Theme change button -->
-                <i class="ri-moon-line change-theme" id="theme-button"></i>
+                   <i class="ri-moon-line change-theme" id="theme-button"></i>
 
                 <div class="nav__toggle" id="nav-toggle">
                     <i class="ri-menu-line"></i>
@@ -92,70 +117,7 @@ session_start();
                 </a>
             </article>
 
-            <article class="product__card">
-                <div class="product__circle"></div>
-
-                <img src="assets/img/product2.png" alt="" class="product__img">
-
-                <h3 class="product__title">Cactus Plant</h3>
-                <span class="product__price">$11.99</span>
-
-                <button class="button--flex product__button">
-                    <i class="ri-shopping-bag-line"></i>
-                </button>
-            </article>
-
-            <article class="product__card">
-                <div class="product__circle"></div>
-
-                <img src="assets/img/product3.png" alt="" class="product__img">
-
-                <h3 class="product__title">Aloe Vera Plant</h3>
-                <span class="product__price">$7.99</span>
-
-                <button class="button--flex product__button">
-                    <i class="ri-shopping-bag-line"></i>
-                </button>
-            </article>
-
-            <article class="product__card">
-                <div class="product__circle"></div>
-
-                <img src="assets/img/product4.png" alt="" class="product__img">
-
-                <h3 class="product__title">Succulent Plant</h3>
-                <span class="product__price">$5.99</span>
-
-                <button class="button--flex product__button">
-                    <i class="ri-shopping-bag-line"></i>
-                </button>
-            </article>
-
-            <article class="product__card">
-                <div class="product__circle"></div>
-
-                <img src="assets/img/product5.png" alt="" class="product__img">
-
-                <h3 class="product__title">Succulent Plant</h3>
-                <span class="product__price">$10.99</span>
-
-                <button class="button--flex product__button">
-                    <i class="ri-shopping-bag-line"></i>
-                </button>
-            </article>
-
-            <article class="product__card">
-                <div class="product__circle"></div>
-
-                <img src="assets/img/product6.png" alt="" class="product__img">
-
-                <h3 class="product__title">Green Plant</h3>
-                <span class="product__price">$8.99</span>
-
-                <button class="button--flex product__button">
-                    <i class="ri-shopping-bag-line"></i>
-                </button>
-            </article>
+           
         </div>
     </section>
 

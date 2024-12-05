@@ -1,34 +1,3 @@
-<?php
-session_start();
-
-if (!isset($_SESSION['user_id'])) {
-    header("Location: /PLANT-ECOM-WEBSITE/Back-end/auth/login.php");
-    exit();
-}
-
-include ('/xampp/htdocs/plant-ecom-website/Back-end/config/db.php');
-
-$user_id = $_SESSION['user_id'];
-$stm = $mysqli->prepare("SELECT * FROM users WHERE id = ?");
-$stm->bind_param("i", $user_id);
-$stm->execute();
-$result = $stm->get_result();
-
-if ($result->num_rows === 1) {
-    $user = $result->fetch_assoc();
-
-    $user_id = $user['id'];
-    $first_name = $user['first_name'];
-    $last_name = $user['last_name'];
-    $email = $user['email'];
-    $role = $user['role'];
-    $about = $user['about'];
-} else {
-    echo "No user found!";
-    exit();
-}
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -96,7 +65,7 @@ if ($result->num_rows === 1) {
         <p><?php echo htmlspecialchars($about);?></p>
     </div>
     <div>
-        <a href = "/PLANT-ECOM-WEBSITE/Back-end/dashboard/customer/update-profile.php" class="button button--flex">Update Profile</a>
+        <button class="button button--flex">Update Profile</button>
     </div>
 </aside>
 
