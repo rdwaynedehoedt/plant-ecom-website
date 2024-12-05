@@ -1,5 +1,32 @@
 <?php
 session_start();
+
+if (!isset($_SESSION['user_id'])) {
+    header("Location: /PLANT-ECOM-WEBSITE/Back-end/auth/login.php");
+    exit();
+}
+
+include ('/xampp/htdocs/plant-ecom-website/Back-end/config/db.php');
+
+$user_id = $_SESSION['user_id'];
+$stm = $mysqli->prepare("SELECT * FROM users WHERE id = ?");
+$stm->bind_param("i", $user_id);
+$stm->execute();
+$result = $stm->get_result();
+
+if ($result->num_rows === 1) {
+    $user = $result->fetch_assoc();
+
+    $user_id = $user['id'];
+    $first_name = $user['first_name'];
+    $last_name = $user['last_name'];
+    $email = $user['email'];
+    $role = $user['role'];
+    $about = $user['about'];
+} else {
+    echo "No user found!";
+    exit();
+}
 ?>
 
 <!DOCTYPE html>
@@ -62,11 +89,11 @@ session_start();
     <aside class="profile-card">
     <header>
         <img src="/PLANT-ECOM-WEBSITE/Front-end/assets/img/Profile icon.png" alt="User Avatar" class="profile-avatar">
-        <h1>Test User</h1>
-        <h2>Customer</h2>
+        <h1><?php echo htmlspecialchars($first_name . ' ' . $last_name); ?></h1>
+        <h2><?php echo htmlspecialchars($role);?></h2>
     </header>
     <div class="profile-bio">
-        <p>Passionate about plants and dedicated to bringing nature closer to you. Let's grow together!</p>
+        <p><?php echo htmlspecialchars($about);?></p>
     </div>
     <div>
         <button class="button button--flex">Update Profile</button>
@@ -78,15 +105,11 @@ session_start();
     </main>
 
         <p class="footer__copy">&#169; DwayneFX 2024. All rigths reserved</p>
-      <!--=============== SCROLL UP ===============-->
+
       <a href="#" class="scrollup" id="scroll-up">
         <i class="ri-arrow-up-fill scrollup__icon"></i>
     </a>
-
-    <!--=============== SCROLL REVEAL ===============-->
     <script src="/PLANT-ECOM-WEBSITE/Front-end/assets/js/scrollreveal.min.js"></script>
-
-    <!--=============== MAIN JS ===============-->
     <script src="/PLANT-ECOM-WEBSITE/Front-end/assets/js/main.js"></script>
 </body>
 </html>
