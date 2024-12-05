@@ -3,7 +3,6 @@
     include ('../config/db.php');
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-        // Get email and password from the form
         $email = $_POST['email'];
         $password = $_POST['password'];
     
@@ -26,7 +25,7 @@
                         header("Location: /PLANT-ECOM-WEBSITE/Back-end/dashboard/admin-dashboard.php"); 
                         exit();
                     } else if ($user['role'] === 'customer') {
-                        header("Location: /PLANT-ECOM-WEBSITE/Front-end/index.php"); // Customer dashboard
+                        header("Location: /PLANT-ECOM-WEBSITE/Front-end/index.php"); 
                         exit();
                     } else {
                         echo "Access Denied!";
