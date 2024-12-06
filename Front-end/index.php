@@ -163,11 +163,11 @@ $products = $result->fetch_all(MYSQLI_ASSOC);
             <div class="product__container grid">
                 <?php foreach($products as $product): ?>
                     <article class="product__card">
-                        <a href="product.php">
+                        <a href="product.php ?id=<?php echo $product['id']; ?>">
                         <div class="product__circle"></div>
                             <img src="<?php echo htmlspecialchars($product['image_url']); ?>" alt="<?php echo htmlspecialchars($product['name']); ?>" class="product__img">
                             <h3 class="product__title"><?php echo htmlspecialchars($product['name']); ?></h3>
-                            <span class="product__price">$<?php echo number_format($product['price'], 2); ?></span>
+                            <span class="product__price"><?php echo number_format($product['price'], 2); ?> LKR</span>
                             <a href="#" class="button--flex product__button">
                             <i class="ri-shopping-bag-line"></i>
                             </a>

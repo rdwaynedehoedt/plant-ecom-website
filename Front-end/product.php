@@ -1,5 +1,29 @@
 <?php
 session_start();
+include ('/xampp/htdocs/plant-ecom-website/Back-end/config/db.php');
+
+$product_id = $_GET['id'];
+$stm = $mysqli->prepare("SELECT * FROM products WHERE id = ?");
+$stm->bind_param("i", $product_id);
+$stm->execute();
+$result = $stm->get_result();
+
+if ($result->num_rows === 1) {
+    $product = $result->fetch_assoc();
+
+    $product_id = $product['id'];
+    $name = $product['name'];
+    $price = $product['price'];
+    $image_url = $product['image_url'];
+    $description = $product['description'];
+    $type = $product['type'];
+    $size = $product['size'];
+    $watering = $product['watering'];
+    $light = $product['light'];
+} else {
+    echo "No product found!";
+    exit();
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -9,12 +33,9 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
-    <link rel="stylesheet" href="/PLANT-ECOM-WEBSITE/Front-end/assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
     <title>PlantPedia</title>
-    <style>
-    </style>
 </head>
-
 <body>
 <header class="header" id="header">
         <nav class="nav container">
@@ -72,24 +93,24 @@ session_start();
 
 <section class="product-detail container">
     <div class="product-detail__header">
-        <h1 class="product-detail__title">Mini Cactus</h1>
+        <h1 class="product-detail__title"><?php echo htmlspecialchars($name); ?></h1>
     </div>
 
     <div class="product-detail__content">
         <div class="product-detail__image">
-            <img src="assets/img/product1.png" alt="Mini Cactus Image">
+            <img src="<?php echo htmlspecialchars($image_url); ?>" alt="Mini Cactus Image">
         </div>
 
         <div class="product-detail__info">
-            <p class="product-price">$10.99</p>
+            <p class="product-price"><?php echo htmlspecialchars($price)?> <strong> LKR</strong></p>
             <p class="product-description">
-                This cute mini cactus is a great addition to your desk. It requires minimal care and adds a touch of greenery to your space. Perfect for beginners.
+                <?php echo htmlspecialchars($description); ?>
             </p>
             <ul class="product-specs">
-                <li><strong>Type:</strong> Succulent</li>
-                <li><strong>Size:</strong> 4 inches</li>
-                <li><strong>Watering:</strong> Once a week</li>
-                <li><strong>Light:</strong> Bright, indirect sunlight</li>
+                <li><strong>Type:</strong> <?php echo htmlspecialchars($type); ?> </li>
+                <li><strong>Size:</strong>  <?php echo htmlspecialchars($size); ?></li>
+                <li><strong>Watering:</strong>  <?php echo htmlspecialchars($watering); ?></li>
+                <li><strong>Light:</strong>  <?php echo htmlspecialchars($light); ?></li>
             </ul>
             <div class="product-detail__actions">
                 <button class="button button--flex ">Buy Now</button>
