@@ -96,7 +96,7 @@ if ($result->num_rows === 1) {
         <p><?php echo htmlspecialchars($about);?></p>
     </div>
     <div>
-        <a href = "/PLANT-ECOM-WEBSITE/Back-end/dashboard/customer/update-profile.php" class="button button--flex">Update Profile</a>
+        <a href = "#" class="button button--flex">Update Profile</a>
     </div>
 </aside>
 
