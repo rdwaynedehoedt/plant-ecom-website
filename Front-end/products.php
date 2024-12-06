@@ -134,6 +134,7 @@ $products = $result->fetch_all(MYSQLI_ASSOC);
                 <ul class="footer__data">
                     <li class="footer__information">+94 772186241</li>
 
+                    
                     <div class="footer__social">
                         <a href="https://www.facebook.com/" class="footer__social-link">
                             <i class="ri-facebook-fill"></i>
