@@ -12,7 +12,7 @@ session_start();
     <link rel="stylesheet" href="/PLANT-ECOM-WEBSITE/Back-end/dashboard/customer/styles.css">
 <link rel="stylesheet" href="/PLANT-ECOM-WEBSITE/Front-end/assets/css/styles.css">
 
-    <title>Oder History - PlantPedia</title>
+    <title>My Cart - PlantPedia</title>
 
     
 </head>
@@ -61,7 +61,7 @@ session_start();
     <main class="main">
     <section class="home2" id="home2">
     <div class="order-history-container">
-    <h2>Order History</h2>
+    <h2>My Cart</h2>
     <ul class="order-list">
         <li class="order-item">
             <img src="/PLANT-ECOM-WEBSITE/Front-end/assets/img/product1.png" alt="Product Image" class="product-image">
