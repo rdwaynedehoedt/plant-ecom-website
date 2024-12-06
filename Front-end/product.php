@@ -12,10 +12,6 @@ session_start();
     <link rel="stylesheet" href="/PLANT-ECOM-WEBSITE/Front-end/assets/css/styles.css">
     <title>PlantPedia</title>
     <style>
-       
-
-       
-       
     </style>
 </head>
 
@@ -40,7 +36,7 @@ session_start();
             </div>
 
             <div class="nav__btns">
-                <!-- Theme change button -->
+
                 <i class="ri-moon-line change-theme" id="theme-button"></i>
 
                 <div class="nav__toggle" id="nav-toggle">
@@ -104,7 +100,7 @@ session_start();
     </div>
 </section>
 
-    <!--==================== FOOTER ====================-->
+
     <footer class="footer section">
         <div class="footer__container container grid">
             <div class="footer__content">
@@ -173,15 +169,11 @@ session_start();
         <p class="footer__copy">&#169; DwayneFX 2024. All rigths reserved</p>
     </footer>
 
-    <!--=============== SCROLL UP ===============-->
     <a href="#" class="scrollup" id="scroll-up">
         <i class="ri-arrow-up-fill scrollup__icon"></i>
     </a>
 
-    <!--=============== SCROLL REVEAL ===============-->
     <script src="assets/js/scrollreveal.min.js"></script>
-
-    <!--=============== MAIN JS ===============-->
     <script src="assets/js/main.js"></script>
 </body>
 

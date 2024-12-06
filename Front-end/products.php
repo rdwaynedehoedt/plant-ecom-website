@@ -80,7 +80,7 @@ $products = $result->fetch_all(MYSQLI_ASSOC);
     <div class="product__container grid">
         <?php foreach ($products as $product): ?>
             <article class="product__card">
-                <a href="product.php?id=<?php echo $product['id']; ?>">
+                <a href="product.php">
                 <div class="product__circle"></div>
 
                 <img src="<?php echo htmlspecialchars($product['image_url']); ?>" alt="<?php echo htmlspecialchars($product['name']); ?>" class="product__img">

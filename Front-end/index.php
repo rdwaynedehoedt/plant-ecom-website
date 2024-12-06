@@ -161,8 +161,19 @@ $products = $result->fetch_all(MYSQLI_ASSOC);
             </p>
 
             <div class="product__container grid">
-            
-                
+                <?php foreach($products as $product): ?>
+                    <article class="product__card">
+                        <a href="product.php">
+                        <div class="product__circle"></div>
+                            <img src="<?php echo htmlspecialchars($product['image_url']); ?>" alt="<?php echo htmlspecialchars($product['name']); ?>" class="product__img">
+                            <h3 class="product__title"><?php echo htmlspecialchars($product['name']); ?></h3>
+                            <span class="product__price">$<?php echo number_format($product['price'], 2); ?></span>
+                            <a href="#" class="button--flex product__button">
+                            <i class="ri-shopping-bag-line"></i>
+                            </a>
+                        </a>
+                    </article>
+                <?php endforeach; ?>
             </div>
         </section>
 
