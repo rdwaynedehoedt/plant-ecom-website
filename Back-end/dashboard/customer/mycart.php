@@ -124,15 +124,11 @@ session_start();
     </section>
     </main>
         <p class="footer__copy">&#169; DwayneFX 2024. All rigths reserved</p>
-      <!--=============== SCROLL UP ===============-->
       <a href="#" class="scrollup" id="scroll-up">
         <i class="ri-arrow-up-fill scrollup__icon"></i>
     </a>
 
-    <!--=============== SCROLL REVEAL ===============-->
     <script src="/PLANT-ECOM-WEBSITE/Front-end/assets/js/scrollreveal.min.js"></script>
-
-    <!--=============== MAIN JS ===============-->
     <script src="/PLANT-ECOM-WEBSITE/Front-end/assets/js/main.js"></script>
 </body>
 </html>
