@@ -1,5 +1,13 @@
 <?php
 session_start();
+
+include('/xampp/htdocs/plant-ecom-website/Back-end/config/db.php');
+
+$stmt = $mysqli->prepare("SELECT * FROM products");
+$stmt->execute();
+$result = $stmt->get_result();
+$products = $result->fetch_all(MYSQLI_ASSOC);
+
 ?>
 
 <!DOCTYPE html>
@@ -36,7 +44,7 @@ session_start();
             </div>
 
             <div class="nav__btns">
-                <!-- Theme change button -->
+
                 <i class="ri-moon-line change-theme" id="theme-button"></i>
 
                 <div class="nav__toggle" id="nav-toggle">
@@ -107,7 +115,6 @@ session_start();
         </section>
 
 
-        <!--==================== STEPS ====================-->
         <section class="steps section container">
             <div class="steps__bg">
                 <h2 class="section__title-center steps__title">
@@ -142,7 +149,7 @@ session_start();
             </div>
         </section>
 
-        <!--==================== PRODUCTS ====================-->
+
         <section class="product section container" id="products">
             <h2 class="section__title-center">
                 Check out our <br> products
@@ -154,88 +161,11 @@ session_start();
             </p>
 
             <div class="product__container grid">
-            <a href="p1.php" class="product__card-link">
-    <article class="product__card">
-        <div class="product__circle"></div>
-
-        <img src="assets/img/product1.png" alt="Cacti Plant" class="product__img">
-
-        <h3 class="product__title">Cacti Plant</h3>
-        <span class="product__price">$19.99</span>
-
-        <button class="button--flex product__button">
-            <i class="ri-shopping-bag-line"></i>
-        </button>
-    </article>
-</a>
-                <article class="product__card">
-                    <div class="product__circle"></div>
-
-                    <img src="assets/img/product2.png" alt="" class="product__img">
-
-                    <h3 class="product__title">Cactus Plant</h3>
-                    <span class="product__price">$11.99</span>
-
-                    <button class="button--flex product__button">
-                        <i class="ri-shopping-bag-line"></i>
-                    </button>
-                </article>
-
-                <article class="product__card">
-                    <div class="product__circle"></div>
-
-                    <img src="assets/img/product3.png" alt="" class="product__img">
-
-                    <h3 class="product__title">Aloe Vera Plant</h3>
-                    <span class="product__price">$7.99</span>
-
-                    <button class="button--flex product__button">
-                        <i class="ri-shopping-bag-line"></i>
-                    </button>
-                </article>
-
-                <article class="product__card">
-                    <div class="product__circle"></div>
-
-                    <img src="assets/img/product4.png" alt="" class="product__img">
-
-                    <h3 class="product__title">Succulent Plant</h3>
-                    <span class="product__price">$5.99</span>
-
-                    <button class="button--flex product__button">
-                        <i class="ri-shopping-bag-line"></i>
-                    </button>
-                </article>
-
-                <article class="product__card">
-                    <div class="product__circle"></div>
-
-                    <img src="assets/img/product5.png" alt="" class="product__img">
-
-                    <h3 class="product__title">Succulent Plant</h3>
-                    <span class="product__price">$10.99</span>
-
-                    <button class="button--flex product__button">
-                        <i class="ri-shopping-bag-line"></i>
-                    </button>
-                </article>
-
-                <article class="product__card">
-                    <div class="product__circle"></div>
-
-                    <img src="assets/img/product6.png" alt="" class="product__img">
-
-                    <h3 class="product__title">Green Plant</h3>
-                    <span class="product__price">$8.99</span>
-
-                    <button class="button--flex product__button">
-                        <i class="ri-shopping-bag-line"></i>
-                    </button>
-                </article>
+            
+                
             </div>
         </section>
 
-        <!--==================== QUESTIONS ====================-->
         <section class="questions section" id="faqs">
             <h2 class="section__title-center questions__title container">
                 Some common questions <br> were often asked
@@ -344,7 +274,7 @@ session_start();
             </div>
         </section>
 
-        <!--==================== CONTACT ====================-->
+
         <section class="contact section container" id="contact">
             <div class="contact__container grid">
                 <div class="contact__box">
@@ -398,7 +328,6 @@ session_start();
         </section>
     </main>
 
-    <!--==================== FOOTER ====================-->
     <footer class="footer section">
         <div class="footer__container container grid">
             <div class="footer__content">
@@ -467,15 +396,12 @@ session_start();
         <p class="footer__copy">&#169; DwayneFX 2024. All rigths reserved</p>
     </footer>
 
-    <!--=============== SCROLL UP ===============-->
     <a href="#" class="scrollup" id="scroll-up">
         <i class="ri-arrow-up-fill scrollup__icon"></i>
     </a>
 
-    <!--=============== SCROLL REVEAL ===============-->
-    <script src="assets/js/scrollreveal.min.js"></script>
 
-    <!--=============== MAIN JS ===============-->
+    <script src="assets/js/scrollreveal.min.js"></script>
     <script src="assets/js/main.js"></script>
 </body>
 
