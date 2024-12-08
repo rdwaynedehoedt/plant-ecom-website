@@ -10,11 +10,10 @@ session_start();
     <link rel="shortcut icon" href="/PLANT-ECOM-WEBSITE/Front-end/assets/img/favicon.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="/PLANT-ECOM-WEBSITE/Back-end/dashboard/customer/styles.css">
-<link rel="stylesheet" href="/PLANT-ECOM-WEBSITE/Front-end/assets/css/styles.css">
+    <link rel="stylesheet" href="/PLANT-ECOM-WEBSITE/Front-end/assets/css/styles.css">
 
     <title>My Cart - PlantPedia</title>
 
-    
 </head>
 <body>
     <header class="header" id="header">
@@ -56,75 +55,46 @@ session_start();
         </nav>
     </header>
 
-
-    
     <main class="main">
-    <section class="home2" id="home2">
-    <div class="order-history-container">
-    <h2>My Cart</h2>
-    <ul class="order-list">
-        <li class="order-item">
-            <img src="/PLANT-ECOM-WEBSITE/Front-end/assets/img/product1.png" alt="Product Image" class="product-image">
-            <div class="order-details">
-                <h3>Mini Cactus</h3>
-                <p>$10.99</p>
-                <p>A cute mini cactus for your desk.</p>
+        <section class="home2" id="home2">
+            <div class="order-history-container">
+                <h2>My Cart</h2>
+                <ul class="order-list">
+                    <li class="order-item">
+                        <img src="/PLANT-ECOM-WEBSITE/Front-end/assets/img/product1.png" alt="Product Image" class="product-image">
+                        <div class="order-details">
+                            <h3>Mini Cactus</h3>
+                            <p>$10.99</p>
+                        </div>
+                        <div class="order-status">
+                            <Button class="status-indicator shipping " style="margin-bottom: 8px;">View Item</Button>
+                            <Button class="status-indicator remove">-</Button>
+                        </div>
+                    </li>
+                </ul>
+                <div class="cart-summary">
+                <div class="summary-item">
+                    <span>Subtotal:</span>
+                    <span>$32.97</span>
+                </div>
+                <div class="summary-item">
+                    <span>Shipping Fee:</span>
+                    <span>$5.00</span>
+                </div>
+                <div class="summary-item total">
+                    <strong>Total:</strong>
+                    <strong>$37.97</strong>
+                </div>
             </div>
-            <div class="order-status">
-                <span class="timeline-icon"><i class="ri-shopping-cart-line"></i></span>
-                <span class="status-indicator order-placed">Order Placed</span>
-                <span class="timeline-date">Nov 15, 2024</span>
+            <div class="button-container">
+                <a href = "#" class="button button--flex">Checkout</a>
             </div>
-        </li>
-        <li class="order-item">
-            <img src="/PLANT-ECOM-WEBSITE/Front-end/assets/img/product2.png" alt="Product Image" class="product-image">
-            <div class="order-details">
-                <h3>Fiddle Leaf Fig</h3>
-                <p>$25.99</p>
-                <p>Perfect for adding greenery to your room.</p>
             </div>
-            <div class="order-status">
-                <span class="timeline-icon"><i class="ri-truck-line"></i></span>
-                <span class="status-indicator shipping">Shipping</span>
-                <span class="timeline-date">Nov 16, 2024</span>
-            </div>
-        </li>
-
-        <li class="order-item">
-            <img src="/PLANT-ECOM-WEBSITE/Front-end/assets/img/product3.png" alt="Product Image" class="product-image">
-            <div class="order-details">
-                <h3>Snake Plant</h3>
-                <p>$19.99</p>
-                <p>Low-maintenance indoor plant.</p>
-            </div>
-            <div class="order-status">
-                <span class="timeline-icon"><i class="ri-map-pin-line"></i></span>
-                <span class="status-indicator out-for-delivery">Out for Delivery</span>
-                <span class="timeline-date">Nov 17, 2024</span>
-            </div>
-        </li>
-
-        <li class="order-item">
-            <img src="/PLANT-ECOM-WEBSITE/Front-end/assets/img/product4.png" alt="Product Image" class="product-image">
-            <div class="order-details">
-                <h3>Monstera Deliciosa</h3>
-                <p>$29.99</p>
-                <p>A statement piece for your living room.</p>
-            </div>
-            <div class="order-status">
-                <span class="timeline-icon"><i class="ri-check-line"></i></span>
-                <span class="status-indicator delivered">Delivered</span>
-                <span class="timeline-date">Nov 18, 2024</span>
-            </div>
-        </li>
-    </ul>
-</div>
-
-
-    </section>
+        </section>
     </main>
-        <p class="footer__copy">&#169; DwayneFX 2024. All rigths reserved</p>
-      <a href="#" class="scrollup" id="scroll-up">
+
+    <p class="footer__copy">&#169; DwayneFX 2024. All rights reserved</p>
+    <a href="#" class="scrollup" id="scroll-up">
         <i class="ri-arrow-up-fill scrollup__icon"></i>
     </a>
 

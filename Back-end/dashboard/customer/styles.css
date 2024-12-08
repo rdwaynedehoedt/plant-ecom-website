@@ -54,9 +54,6 @@ body.dark-theme {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-.dark-theme .order-item{
-    color: var(--first-color-Dark)
-}
 
 /* Product Image */
 .product-image {
@@ -136,9 +133,31 @@ body.dark-theme {
     background-color: #8bc34a;
 }
 
+.remove {
+    background-color: #db1a1a;
+}
+
 /* Timeline Date */
 .timeline-date {
     font-size: 11px;
     color: #999;
+    margin-top: 5px;
+}
+
+.cart-summary {
+    margin-top: 20px;
+    padding: 15px;
+    border-top: 1px solid #ccc;
+    font-size: 0.9em;
+}
+.summary-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
     margin-top: 5px;
 }
