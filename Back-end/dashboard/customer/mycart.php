@@ -1,5 +1,32 @@
 <?php
 session_start();
+
+include ('/xampp/htdocs/plant-ecom-website/Back-end/config/db.php');
+
+if (isset($_GET['id']) && !empty($_GET['id'])) {
+    $product_id = intval($_GET['id']);
+
+    $stm = $mysqli->prepare("SELECT * FROM products WHERE id = ?");
+    $stm->bind_param("i", $product_id);
+    $stm->execute();
+    $result = $stm->get_result();
+
+    if ($result->num_rows === 1) {  
+        $product = $result->fetch_assoc();
+
+        $product_id = $product['id'];
+        $name = htmlspecialchars($product['name']);
+        $price = htmlspecialchars($product['price']);
+        $image_url = htmlspecialchars($product['image_url']);
+        $description = htmlspecialchars($product['description']);
+        $type = htmlspecialchars($product['type']);
+        $size = htmlspecialchars($product['size']);
+        $watering = htmlspecialchars($product['watering']);
+        $light = htmlspecialchars($product['light']);
+
+    }
+
+}
 ?>
 
 <!DOCTYPE html>
@@ -61,13 +88,13 @@ session_start();
                 <h2>My Cart</h2>
                 <ul class="order-list">
                     <li class="order-item">
-                        <img src="/PLANT-ECOM-WEBSITE/Front-end/assets/img/product1.png" alt="Product Image" class="product-image">
+                        <img src="<?php echo htmlspecialchars($image_url); ?>" alt="Product Image" class="product-image">
                         <div class="order-details">
-                            <h3>Mini Cactus</h3>
-                            <p>$10.99</p>
+                            <h3><?php echo htmlspecialchars($name); ?></h3>
+                            <p><?php echo htmlspecialchars($price)?></p>
                         </div>
                         <div class="order-status">
-                            <Button class="status-indicator shipping " style="margin-bottom: 8px;">View Item</Button>
+                            <a href="/PLANT-ECOM-WEBSITE/Front-end/product.php ?id=<?php echo $product['id']; ?>" class="status-indicator shipping " style="margin-bottom: 8px;">View Item</a>
                             <Button class="status-indicator remove">-</Button>
                         </div>
                     </li>

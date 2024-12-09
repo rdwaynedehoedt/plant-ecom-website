@@ -114,7 +114,10 @@ if ($result->num_rows === 1) {
             </ul>
             <div class="product-detail__actions">
                 <button class="button button--flex ">Buy Now</button>
-                <button class="button button--flex"><i class="ri-shopping-cart-line"></i> Add to Cart</button>
+                <a href="/PLANT-ECOM-WEBSITE/Back-end/dashboard/customer/mycart.php?id=<?php echo urlencode($product['id']); ?>" class="button button--flex">
+    <i class="ri-shopping-cart-line"></i> Add to Cart
+</a>
+
                 <button class="button button--flex"><i class="ri-heart-line"></i> Favourites</button>
             </div>
         </div>
