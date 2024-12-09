@@ -14,19 +14,36 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
     if ($result->num_rows === 1) {  
         $product = $result->fetch_assoc();
 
-        $product_id = $product['id'];
-        $name = htmlspecialchars($product['name']);
-        $price = htmlspecialchars($product['price']);
-        $image_url = htmlspecialchars($product['image_url']);
-        $description = htmlspecialchars($product['description']);
-        $type = htmlspecialchars($product['type']);
-        $size = htmlspecialchars($product['size']);
-        $watering = htmlspecialchars($product['watering']);
-        $light = htmlspecialchars($product['light']);
+        if (isset($_SESSION['cart'][$product_id])) {
+            $_SESSION['cart'][$product_id]['quantity']++;
+        } else {
+            $_SESSION['cart'][$product_id] = [
+                'id' => $product['id'],
+                'name' => htmlspecialchars($product['name']),
+                'price' => floatval($product['price']),
+                'image_url' => htmlspecialchars($product['image_url']),
+                'quantity' => 1
+            ];
+        }
 
     }
 
 }
+
+if (isset($_GET['remove']) && !empty($_GET['remove'])) {
+    $product_id = intval($_GET['remove']);
+    if (isset($_SESSION['cart'][$product_id])) {
+        unset($_SESSION['cart'][$product_id]);
+    }
+}
+
+
+$subtotal = 0;
+foreach ($_SESSION['cart'] as $item) {
+    $subtotal += $item['price'] * $item['quantity'];
+}
+$shipping_fee = 5.00;
+$total = $subtotal + $shipping_fee;
 ?>
 
 <!DOCTYPE html>
@@ -83,42 +100,53 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
     </header>
 
     <main class="main">
-        <section class="home2" id="home2">
-            <div class="order-history-container">
-                <h2>My Cart</h2>
+    <section class="home2" id="home2">
+        <div class="order-history-container">
+            <h2>My Cart</h2>
+            <?php if (empty($_SESSION['cart'])): ?>
+                <p class="no-products-message">There are no products in your cart.</p>
+            <?php else: ?>
                 <ul class="order-list">
-                    <li class="order-item">
-                        <img src="<?php echo htmlspecialchars($image_url); ?>" alt="Product Image" class="product-image">
-                        <div class="order-details">
-                            <h3><?php echo htmlspecialchars($name); ?></h3>
-                            <p><?php echo htmlspecialchars($price)?></p>
-                        </div>
-                        <div class="order-status">
-                            <a href="/PLANT-ECOM-WEBSITE/Front-end/product.php ?id=<?php echo $product['id']; ?>" class="status-indicator shipping " style="margin-bottom: 8px;">View Item</a>
-                            <Button class="status-indicator remove">-</Button>
-                        </div>
-                    </li>
+                    <?php foreach ($_SESSION['cart'] as $item): ?>
+                        <li class="order-item">
+                            <img src="<?php echo $item['image_url']; ?>" alt="Product Image" class="product-image">
+                            <div class="order-details">
+                                <h3><?php echo $item['name']; ?></h3>
+                                <p>Price: $<?php echo number_format($item['price'], 2); ?></p>
+                                <p>Quantity: <?php echo $item['quantity']; ?></p>
+                            </div>
+                            <div class="order-status">
+                                <a href="/PLANT-ECOM-WEBSITE/Back-end/dashboard/customer/mycart.php?remove=<?php echo $item['id']; ?>" class="status-indicator remove">Remove</a>
+                            </div>
+                        </li>
+                    <?php endforeach; ?>
                 </ul>
+            <?php endif; ?>
+
+            <?php if (!empty($_SESSION['cart'])): ?>
                 <div class="cart-summary">
-                <div class="summary-item">
-                    <span>Subtotal:</span>
-                    <span>$32.97</span>
+                    <div class="summary-item">
+                        <span>Subtotal:</span>
+                        <span>$<?php echo number_format($subtotal, 2); ?></span>
+                    </div>
+                    <div class="summary-item">
+                        <span>Shipping Fee:</span>
+                        <span>$<?php echo number_format($shipping_fee, 2); ?></span>
+                    </div>
+                    <div class="summary-item total">
+                        <strong>Total:</strong>
+                        <strong>$<?php echo number_format($total, 2); ?></strong>
+                    </div>
                 </div>
-                <div class="summary-item">
-                    <span>Shipping Fee:</span>
-                    <span>$5.00</span>
+                <div class="button-container">
+                    <a href="#" class="button button--flex">Checkout</a>
                 </div>
-                <div class="summary-item total">
-                    <strong>Total:</strong>
-                    <strong>$37.97</strong>
-                </div>
-            </div>
-            <div class="button-container">
-                <a href = "#" class="button button--flex">Checkout</a>
-            </div>
-            </div>
-        </section>
-    </main>
+            <?php endif; ?>
+
+        </div>
+    </section>
+</main>
+
 
     <p class="footer__copy">&#169; DwayneFX 2024. All rights reserved</p>
     <a href="#" class="scrollup" id="scroll-up">
