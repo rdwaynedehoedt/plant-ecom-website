@@ -37,12 +37,23 @@ if (isset($_GET['remove']) && !empty($_GET['remove'])) {
     }
 }
 
+if (isset($_GET['add']) && !empty($_GET['add'])) {
+    $product_id = intval($_GET['add']);
+    if (isset($_SESSION['cart'][$product_id])) {
+        $_SESSION['cart'][$product_id]['quantity']++;
+    } else {
+        $_SESSION['cart'][$product_id] = [
+            'quantity' => 1,
+        ];
+    }
+}
+
 
 $subtotal = 0;
 foreach ($_SESSION['cart'] as $item) {
     $subtotal += $item['price'] * $item['quantity'];
 }
-$shipping_fee = 5.00;
+$shipping_fee = 250.00;
 $total = $subtotal + $shipping_fee;
 ?>
 
@@ -105,9 +116,10 @@ $total = $subtotal + $shipping_fee;
             <h2>My Cart</h2>
             <?php if (empty($_SESSION['cart'])): ?>
                 <p class="no-products-message">There are no products in your cart.</p>
-            <?php else: ?>
+                <?php else: ?>
                 <ul class="order-list">
                     <?php foreach ($_SESSION['cart'] as $item): ?>
+                        
                         <li class="order-item">
                             <img src="<?php echo $item['image_url']; ?>" alt="Product Image" class="product-image">
                             <div class="order-details">
@@ -116,6 +128,7 @@ $total = $subtotal + $shipping_fee;
                                 <p>Quantity: <?php echo $item['quantity']; ?></p>
                             </div>
                             <div class="order-status">
+                                <a href="/PLANT-ECOM-WEBSITE/Back-end/dashboard/customer/mycart.php?add=<?php echo $item['id']; ?>" class="status-indicator shipping" style="margin-bottom: 5px;">+</a>
                                 <a href="/PLANT-ECOM-WEBSITE/Back-end/dashboard/customer/mycart.php?remove=<?php echo $item['id']; ?>" class="status-indicator remove">Remove</a>
                             </div>
                         </li>
@@ -127,15 +140,15 @@ $total = $subtotal + $shipping_fee;
                 <div class="cart-summary">
                     <div class="summary-item">
                         <span>Subtotal:</span>
-                        <span>$<?php echo number_format($subtotal, 2); ?></span>
+                        <span><?php echo number_format($subtotal, 2); ?> LKR</span>
                     </div>
                     <div class="summary-item">
                         <span>Shipping Fee:</span>
-                        <span>$<?php echo number_format($shipping_fee, 2); ?></span>
+                        <span><?php echo number_format($shipping_fee, 2); ?> LKR</span>
                     </div>
                     <div class="summary-item total">
                         <strong>Total:</strong>
-                        <strong>$<?php echo number_format($total, 2); ?></strong>
+                        <strong><?php echo number_format($total, 2); ?> LKR</strong>
                     </div>
                 </div>
                 <div class="button-container">
