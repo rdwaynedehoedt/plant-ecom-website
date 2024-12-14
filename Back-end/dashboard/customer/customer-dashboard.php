@@ -54,7 +54,6 @@ if ($result->num_rows === 1) {
                     <li class="nav__item"><a href="/PLANT-ECOM-WEBSITE/Front-end/index.php" class="nav__link">Home</a></li>
                     <li class="nav__item"><a href="/PLANT-ECOM-WEBSITE/Back-end/dashboard/customer/customer-dashboard.php" class="nav__link">Profile</a></li>
                     <li class="nav__item"><a href="/PLANT-ECOM-WEBSITE/Back-end/dashboard/customer/oder-history.php" class="nav__link">Order History</a></li>
-                    <li class="nav__item"><a href="/PLANT-ECOM-WEBSITE/Back-end/dashboard/customer/favourites.php" class="nav__link">Favourites</a></li>
                     <li class="nav__item"><a href="/PLANT-ECOM-WEBSITE/Back-end/dashboard/customer/mycart.php" class="nav__link">My Cart</a></li>
                 </ul>
 
