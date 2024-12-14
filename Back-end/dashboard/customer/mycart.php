@@ -1,6 +1,10 @@
 <?php
 session_start();
 
+if (!isset($_SESSION['cart'])) {
+    $_SESSION['cart'] = [];
+}
+
 include ('/xampp/htdocs/plant-ecom-website/Back-end/config/db.php');
 
 if (isset($_GET['id']) && !empty($_GET['id'])) {
@@ -25,9 +29,7 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
                 'quantity' => 1
             ];
         }
-
     }
-
 }
 
 if (isset($_GET['remove']) && !empty($_GET['remove'])) {
@@ -47,7 +49,6 @@ if (isset($_GET['add']) && !empty($_GET['add'])) {
         ];
     }
 }
-
 
 $subtotal = 0;
 foreach ($_SESSION['cart'] as $item) {
@@ -82,7 +83,7 @@ $total = $subtotal + $shipping_fee;
                     <li class="nav__item"><a href="/PLANT-ECOM-WEBSITE/Front-end/index.php" class="nav__link">Home</a></li>
                     <li class="nav__item"><a href="/PLANT-ECOM-WEBSITE/Back-end/dashboard/customer/customer-dashboard.php" class="nav__link">Profile</a></li>
                     <li class="nav__item"><a href="/PLANT-ECOM-WEBSITE/Back-end/dashboard/customer/oder-history.php" class="nav__link">Order History</a></li>
-                    <li class="nav__item"><a href="#" class="nav__link">Favourites</a></li>
+                    <li class="nav__item"><a href="/PLANT-ECOM-WEBSITE/Back-end/dashboard/customer/favourites.php" class="nav__link">Favourites</a></li>
                     <li class="nav__item"><a href="/PLANT-ECOM-WEBSITE/Back-end/dashboard/customer/mycart.php" class="nav__link">My Cart</a></li>
                 </ul>
 
@@ -129,7 +130,7 @@ $total = $subtotal + $shipping_fee;
                             </div>
                             <div class="order-status">
                                 <a href="/PLANT-ECOM-WEBSITE/Back-end/dashboard/customer/mycart.php?add=<?php echo $item['id']; ?>" class="status-indicator shipping" style="margin-bottom: 5px;">+</a>
-                                <a href="/PLANT-ECOM-WEBSITE/Back-end/dashboard/customer/mycart.php?remove=<?php echo $item['id']; ?>" class="status-indicator remove">Remove</a>
+                                <a href="/PLANT-ECOM-WEBSITE/Back-end/dashboard/customer/mycart.php?remove=<?php echo $item['id']; ?>" class="status-indicator remove">-</a>
                             </div>
                         </li>
                     <?php endforeach; ?>
